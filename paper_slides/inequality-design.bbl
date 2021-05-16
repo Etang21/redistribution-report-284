@@ -1,0 +1,46 @@
+
+
+% Bibstyle aea.bst version 2009.05.20
+
+\begin{thebibliography}{xx}
+
+\harvarditem[Akbarpour, Dworczak \harvardand\ Kominers]{Mohammad Akbarpour,
+  Piotr Dworczak \harvardand\ Scott~Duke Kominers}{2020}{akbarpour-2020}
+{\bf Akbarpour, Mohammad, Piotr Dworczak, and Scott~Duke Kominers.} 2020.
+  ``Redistributive Allocation Mechanisms.'' {\em Working Paper}.
+
+\harvarditem[Alaei, Jalaly \harvardand\ Tardos]{Saeed Alaei, Pooya Jalaly
+  \harvardand\ Eva Tardos}{2017}{alaei-2017}
+{\bf Alaei, Saeed, Pooya Jalaly, and Eva Tardos.} 2017. ``Computing Equilibrium
+  in Matching Markets.'' {\em Proceedings of the 2017 ACM Conference on
+  Economics and Computation}.
+
+\harvarditem[Babaioff, Nisan \harvardand\ Talgam-Cohen]{Moshe Babaioff, Noam
+  Nisan \harvardand\ Inbal Talgam-Cohen}{2019}{babaioff-2019}
+{\bf Babaioff, Moshe, Noam Nisan, and Inbal Talgam-Cohen.} 2019. ``Fair
+  Allocation through Competitive Equilibrium from Generic Incomes.'' {\em
+  ’19: Conference on Fairness, Accountability, and Transparency}.
+
+\harvarditem[Budish]{Eric Budish}{2011}{budish-2011}
+{\bf Budish, Eric.} 2011. ``The Combinatorial Assignment Problem: Approximate
+  Competitive Equilibrium from Equal Incomes.'' {\em Journal of Political
+  Economy}, 119(6).
+
+\harvarditem[Dworczak, Kominers \harvardand\ Akbarpour]{Piotr Dworczak,
+  Scott~Duke Kominers \harvardand\ Mohammad Akbarpour}{2020}{dworczak-2020}
+{\bf Dworczak, Piotr, Scott~Duke Kominers, and Mohammad Akbarpour.} 2020.
+  ``Redistribution through Markets.'' {\em Working Paper}.
+
+\harvarditem[Pathak et~al.]{Parag~A. Pathak, Tayfun Sönmez, M.~Utku Ünver
+  \harvardand\ M.~Bumin Yenmez}{2020}{pathak-2020}
+{\bf Pathak, Parag~A., Tayfun Sönmez, M.~Utku Ünver, and M.~Bumin Yenmez.}
+  2020. ``Fair Allocation of Vaccines, Ventilators and Antiviral Treatments:
+  Leaving No Ethical Value Behind in Health Care Rationing.'' {\em NBER Working
+  Paper}.
+
+\harvarditem[Weitzman]{Martin~L. Weitzman}{1977}{weitzman-1977}
+{\bf Weitzman, Martin~L.} 1977. ``Is the Price System or Rationing More
+  Effective in Getting a Commodity to Those Who Need it Most?'' {\em The Bell
+  Journal of Economics}, 8(2).
+
+\end{thebibliography}
