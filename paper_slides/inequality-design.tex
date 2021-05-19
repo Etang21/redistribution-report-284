@@ -1,5 +1,5 @@
 % JEL-Article.tex for AEA last revised 22 June 2011
-\documentclass[JEL]{AEA}
+\documentclass[AER]{AEA}
 
 % The mathtime package uses a Times font instead of Computer Modern.
 % Uncomment the line below if you wish to use the mathtime package:
@@ -16,6 +16,9 @@
 % Uncomment the next line to use the natbib package with bibtex 
 \usepackage{natbib}
 \usepackage{hyperref} 
+\usepackage{bbm}
+\usepackage{enumerate}
+\usepackage[shortlabels]{enumitem}
 
 % Uncomment the next line to use the harvard package with bibtex
 %\usepackage[abbr]{harvard}
@@ -110,17 +113,113 @@ The paper raises several interesting extensions. Most immediately, the model onl
     \item \cite{pathak-2020} develop results in the theory of reserves, when there are various categories of a good in reserve, and agents are eligible for each reserve based on what eligibility categories they fall into. What if goods in the reserves are heterogeneous in quality, and agents have preferences over the quality of goods? This extension would be analogous to the way that \cite{akbarpour-2020} extended Condorelli (2013), expanding the work to include items of heterogeneous quality. That said, I'm not quite sure what the real-world analogy would be here. The original model of \cite{pathak-2020} focused on medical supplies such as vaccines and ventilators; I'm not sure how salient preferences over quality are in this domain.
 \end{enumerate}
 
+\section{Risk-Averse Agents}
+
+\section{Economic Intuition}
+
+As a motivating example to consider the limitations of \cite{dworczak-2020}, consider an example in labor markets, where agents may be quite risk-averse about the income they receive. In our case, consider a group of taxi drivers (sellers) queued up and hoping to sell rides to a set of passengers (buyers). Sellers in this case may be risk-averse, as they may prefer a lower guaranteed income (a transfer) to an uncertain probability of a higher reward (being rationed into the market and making a sale). Thus with risk-averse preferences for money, we might expect that the optimal mechanism is more likely to utilize lump-sum transfers, instead of rationing, than in the case of perfectly linear utilities.
+
+%TODO: Fill in the example here with taxi drivers. Or maybe choose a different example.
+
+As rationing is generally used more often in the seller side, we may naturally be more concerned with risk-averse preferences for sellers. As in the case of sellers entering a market to earn their income, this suggests that we should first concern ourselves with agents' risk-averse preferences for money. For example, a ridesharing driver may be less risk-averse with respect to the time it takes to accept a ride, but may be fairly risk-averse with regards to the income they accumulate in a given day.
+
 \section{Framework}
 
-In our modeling framework, we preserve much of the notation from \cite{dworczak-2020}. We continue to consider an indivisible good $K$, a divisible good $M$ representing money, a unit mass of prospective sellers, and a mass $\mu$ of prospective buyers.
+In our modeling framework, we preserve much of the notation from \cite{dworczak-2020}. We continue to consider an indivisible good $K$, a divisible good $M$ representing money, a unit mass of prospective sellers, and a mass $\mu$ of prospective buyers. Our main departure will be to model risk-aversion of agents over money.
 
-Our first departure is our modeling of the preference of agents. Here we wish to capture a world in which buyers and sellers are risk-averse over money, though not necessarily over the good $K$. However, we would also like to maintain the notion that agents have varying marginal utilities for both money and the good $K$. Again, let $v^K$ denote an agent's marginal utility for good $K$ and let $v^M$ denote an agent's marginal utility for $M$. Then one possible model for the utility for a risk-averse agent receiving quantities $x^K$ and $x^M$ of the two goods, respectively, is 
+\subsection{Preferences}
+
+Our first departure is our modeling of the preference of agents. Here we wish to capture a world in which buyers and sellers are risk-averse over money, though not necessarily over the good $K$. However, we would also like to maintain the notion that agents have varying marginal utilities for both money and the good $K$. Again, let $v^K$ denote an agent's marginal utility for good $K$ and let $v^M$ denote an agent's marginal utility for $M$. 
+
+We then can characterize possible preferences for agents by utility functions of the form
+
+$$
+u(x^K, x^M; v^K, v^M) = v^K x^K + w(x^M; v^M)
+$$
+
+where $w$ denotes agents' utility for money, parametrized by their marginal utility for money $v^M$. To model our risk-aversion scenario, this utility function $w$ should satisfy three criteria. First, it should be concave (representing risk aversion). Second, the agent's marginal utility for money when they have no money should be $v^M$. Third, agents' utilities for a given amount of money should be increasing in their marginal valuation $v^M$. We formalize these conditions as
+
+\begin{enumerate}[(i)]
+    \item $w'' > 0$ (concavity)
+    \item $w'(0; v^M) = v^M$ (marginal utility)
+    \item For all $x^M$ and all $v^{M'} > v^M$, $w(x^M; v^{M'}) > w(x^M; v^M)$ (increasing in $v^M$)
+\end{enumerate}
+
+Specifying the model, one possible model for the utility for a risk-averse agent receiving quantities $x^K$ and $x^M$ of the two goods, respectively, is given with a logarithmic valuation for money $w$, so
 
 $$
 u(x^K, x^M; v^k, v^M) = v^K x^K + \log(v^M x^M + 1).
 $$
 
 Note here that the marginal utility for good $K$ is indeed $v^K$, and when the agent receives no money, the marginal utility for money is $v^M$.
+
+% TODO: Flesh this out to find a class of possible functions w so that we can interpolate between "very concave" functions and "nearly linear" functions w. This may entail, for some given w, taking some parameter k which shifts and interpolates w as necessary to get the result we want.
+
+\section{Optimality on the Seller Side}
+
+We now move to analyzing the optimal mechanism on the seller side, for a fixed quantity $Q$ of the good that the designer would like to purchase, and an existing revenue $R$ that they have.
+
+\subsection{Economic Intuition}
+
+Turning again to the three factors that influence the market designer in choosing a price $p_s$, we may consider again the effects of raising the price $p_s$. To review, the three effects of changing the price are
+
+\begin{enumerate}[(a)]
+    \item [-] A decrease in allocative efficiency, since we now may be allocating to agents with a lower marginal rate of substitution. 
+    \item [-] The market designer must spend more to acquire $Q$ items, reducing the amount of the lump-sum transfer $R - p_SQ$.
+    \item [+] Sellers who are rationed into the market receive a higher price for their sale.
+\end{enumerate}
+
+In comparison to the case of linear utilities, in this risk-averse scenario, we may find that agents prefer a higher lump-sum transfer to a higher price when they sell their good. This is because the lump-sum transfer is guaranteed to all agents, while agents may be risk-averse about their chance of being rationed into the market in (c).
+
+% TODO: When the good is very valuable, we may really prefer a rationing solution?
+
+\subsection{Maximization Problem}
+
+The next complication is that since utility in money is non-linear, we can no longer solely characterize agents' utilities using their marginal rate of substitution between the good and money.
+
+Second, the original work of \cite{dworczak-2020} separates the objective maximization into two components: the expected change in utility from transactions for sellers who are able to sell their good, and the expected additional utility from any lump sum to the sellers. However, since our preferences for money are now non-linear, we must now separate our objective maximization into components based on which agents are receiving each transfer. Concretely, we have three categories of sellers: those who are willing to sell and do sell, those who are willing to sell but cannot sell, and those who do not wish to sell.
+
+First, to determine the relative proportion of each group of sellers, we must determine the quantity of sellers who are willing to sell at a price $p_S$. As utilities are non-linear, sellers' decision to trade also depends on the amount of the lump-sum payment $R - p_S Q$. We denote this quantity of sellers by $\tau$. This quantity is then
+
+$$
+\tau = \int_{\underline{v}^K, \underline{v}^M}^{\overline{v}^K, \overline{v}^M} \mathbbm{1}[w(p_s + R - p_SQ; v^M) \ge w(R - p_S Q ; v^M) + v^K] dF(v^K, v^M)
+$$
+
+For sellers who are able to sell their good, these agents have none of the good, receive the price $p_s$, and further receive a lump-sum transfer of $R - p_s Q$. Thus the contribution of these sellers is
+
+\begin{equation}
+    \frac{Q}{\tau} \int_{\underline{v}^K, \underline{v}^M}^{\overline{v}^K, \overline{v}^M} \mathbbm{1}[w(p_s + R - p_SQ; v^M) \ge w(R - p_S Q ; v^M) + v^K] w(p_s + R - p_SQ; v^M) dF(v^K, v^M)
+\end{equation}
+
+% TODO: Write these double integrals in a more rigorous way!
+
+On the other hand, sellers who wish to sell their good but are rationed out of the market receive only the good and the lump sum transfer. Thus the contribution of these sellers is
+
+\begin{equation}
+    \frac{\tau - Q}{\tau} \int_{\underline{v}^K, \underline{v}^M}^{\overline{v}^K, \overline{v}^M} \mathbbm{1}[w(R - p_SQ; v^M) \ge w(R - p_S Q ; v^M) + v^K] (v^K + w(R - p_SQ; v^M)) dF(v^K, v^M)
+\end{equation}
+
+Finally, sellers who do not wish to sell receive only the good and the lump sum transfer as well, making the contribution of a unit of these sellers
+
+\begin{equation}
+    \int_{\underline{v}^K, \underline{v}^M}^{\overline{v}^K, \overline{v}^M} \mathbbm{1}[w(R - p_SQ; v^M) \le w(R - p_S Q ; v^M) + v^K] (v^K + w(R - p_SQ; v^M)) dF(v^K, v^M)
+\end{equation}
+
+Thus our complete maximization objective Is
+
+\begin{equation}
+    \begin{split}
+        & \frac{Q}{\tau} \int_{\underline{v}^K, \underline{v}^M}^{\overline{v}^K, \overline{v}^M} \mathbbm{1}[w(p_s + R - p_SQ; v^M) \ge w(R - p_S Q ; v^M) + v^K] w(p_s + R - p_SQ; v^M) dF(v^K, v^M) \\
+        & + \frac{\tau - Q}{\tau} \int_{\underline{v}^K, \underline{v}^M}^{\overline{v}^K, \overline{v}^M} \mathbbm{1}[w(R - p_SQ; v^M) \ge w(R - p_S Q ; v^M) + v^K] (v^K + w(R - p_SQ; v^M)) dF(v^K, v^M) \\
+        & + \int_{\underline{v}^K, \underline{v}^M}^{\overline{v}^K, \overline{v}^M} \mathbbm{1}[w(R - p_SQ; v^M) \le w(R - p_S Q ; v^M) + v^K] (v^K + w(R - p_SQ; v^M)) dF(v^K, v^M)
+    \end{split}
+\end{equation}
+
+\section{Numerical Analysis}
+
+TODO: Include the optimal solution plots with slightly concave preferences. Compare these to the original plots without slightly concave preferences.
+
+
 
 
 % \section{Further Reading}

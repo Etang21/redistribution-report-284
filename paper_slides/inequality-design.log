@@ -1,14 +1,14 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  13 MAY 2021 14:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  19 MAY 2021 16:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/etang/stanford-classes/honors-thesis/lit-reviews/inequality-design-condensed/inequality-design.tex
-(/Users/etang/stanford-classes/honors-thesis/lit-reviews/inequality-design-condensed/inequality-design.tex
+**/Users/etang/stanford-classes/honors-thesis/redistribution-report-284/paper_slides/inequality-design.tex
+(/Users/etang/stanford-classes/honors-thesis/redistribution-report-284/paper_slides/inequality-design.tex
 LaTeX2e <2018-12-01>
-(/Users/etang/stanford-classes/honors-thesis/lit-reviews/inequality-design-condensed/AEA.cls
+(/Users/etang/stanford-classes/honors-thesis/redistribution-report-284/paper_slides/AEA.cls
 Document Class: AEA 2011/07/24 American Economic Association Article Classes
-(/Users/etang/stanford-classes/honors-thesis/lit-reviews/inequality-design-condensed/multicol.sty
+(/Users/etang/stanford-classes/honors-thesis/redistribution-report-284/paper_slides/multicol.sty
 Package: multicol 2004/02/14 v1.6e multicolumn formatting (FMi)
 \c@tracingmulticols=\count80
 \mult@box=\box27
@@ -54,7 +54,7 @@ Package: multicol 2004/02/14 v1.6e multicolumn formatting (FMi)
 \multicolundershoot=\dimen109
 \mult@nat@firstbox=\box51
 \colbreak@box=\box52
-) (/Users/etang/stanford-classes/honors-thesis/lit-reviews/inequality-design-condensed/setspace.sty
+) (/Users/etang/stanford-classes/honors-thesis/redistribution-report-284/paper_slides/setspace.sty
 Package: setspace 2000/12/01 6.7 Contributed and Supported LaTeX2e package
 
 Package: `setspace' 6.7 <2000/12/01>
@@ -113,12 +113,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
 LaTeX Info: Redefining \[ on input line 2844.
 LaTeX Info: Redefining \] on input line 2845.
 )
-Journal Selected: JOURNAL OF ECONOMIC LITERATURE
+Journal Selected: THE AMERICAN ECONOMIC REVIEW
 Mode Selected: final
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 333.
-
 \abstractIndent=\skip46
 \abstractWidth=\skip47
 \c@part=\count100
@@ -237,248 +233,125 @@ Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 282.
 )
 \Hy@SectionHShift=\skip52
-) (/Users/etang/stanford-classes/honors-thesis/lit-reviews/inequality-design-condensed/inequality-design.aux)
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/bbm-macros/bbm.sty
+Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
+LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
+(Font)                  U/bbm/m/n --> U/bbm/bx/n on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
+(Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/tools/enumerate.sty
+Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
+\@enLab=\toks20
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/02/04 v3.8 Customized lists
+\labelindent=\skip53
+\enit@outerparindent=\dimen124
+\enit@toks=\toks21
+\enit@inbox=\box55
+\enit@count@id=\count119
+\enitdp@description=\count120
+) (/Users/etang/stanford-classes/honors-thesis/redistribution-report-284/paper_slides/inequality-design.aux)
 \openout1 = `inequality-design.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-\AtBeginShipoutBox=\box55
-Package hyperref Info: Link coloring OFF on input line 27.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+\AtBeginShipoutBox=\box56
+Package hyperref Info: Link coloring OFF on input line 30.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
  (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count119
+\c@section@level=\count121
 )
-LaTeX Info: Redefining \ref on input line 27.
-LaTeX Info: Redefining \pageref on input line 27.
-LaTeX Info: Redefining \nameref on input line 27.
- (/Users/etang/stanford-classes/honors-thesis/lit-reviews/inequality-design-condensed/inequality-design.out) (/Users/etang/stanford-classes/honors-thesis/lit-reviews/inequality-design-condensed/inequality-design.out)
+LaTeX Info: Redefining \ref on input line 30.
+LaTeX Info: Redefining \pageref on input line 30.
+LaTeX Info: Redefining \nameref on input line 30.
+ (/Users/etang/stanford-classes/honors-thesis/redistribution-report-284/paper_slides/inequality-design.out) (/Users/etang/stanford-classes/honors-thesis/redistribution-report-284/paper_slides/inequality-design.out)
 \@outlinefile=\write3
 \openout3 = `inequality-design.out'.
 
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <24> not available
-(Font)              size <24.88> substituted on input line 46.
-
-
-LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <24> not available
-(Font)              size <24.88> substituted on input line 46.
-
-
-LaTeX Font Warning: Font shape `OT1/cmss/bx/n' in size <24> not available
-(Font)              size <24.88> substituted on input line 46.
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 46.
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 49.
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 46.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/it' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 46.
-
-LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 46.
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 46.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 46.
-
-
-LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 46.
-
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 49.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 46.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 49.
+ [1
 
-Underfull \hbox (badness 2334) in paragraph at lines 49--50
-\OT1/cmr/m/n/10.95 to ad-dress in-equal-ity in these mar-
- []
+{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+Underfull \vbox (badness 1158) has occurred while \output is active []
 
-
-Underfull \hbox (badness 2050) in paragraph at lines 49--50
-\OT1/cmr/m/n/10.95 Dwor-czak and Komin-ers[] ([]2020[]) and
- []
-
-
-Underfull \hbox (badness 1199) in paragraph at lines 55--56
-\OT1/cmr/m/n/10.95 utility-maximizing mech-a-nisms in the
- []
-
-[1{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
-
-
-]
-Underfull \hbox (badness 2452) in paragraph at lines 66--67
-[]\OT1/cmr/m/n/10.95 Early work ex-plor-ing this bal-ance
- []
-
-
-Underfull \hbox (badness 1436) in paragraph at lines 66--67
-\OT1/cmr/m/n/10.95 in-cludes []Weitz-man[] ([]1977[]), who asks
- []
-
-[2]
-Underfull \hbox (badness 1048) in paragraph at lines 72--73
-\OT1/cmr/m/n/10.95 (Roughly speak-ing, the val-u-a-tion for
- []
-
-
-Underfull \hbox (badness 1331) in paragraph at lines 74--75
-[]\OT1/cmr/m/n/10.95 The key ob-sta-cle which []Dwor-czak,
- []
-
-
-Underfull \vbox (badness 1874) has occurred while \output is active []
-
- [3]
-Underfull \hbox (badness 1565) in paragraph at lines 92--93
-\OT1/cmr/m/n/10.95 sci-ence and eco-nomics lit-er-a-ture.
- []
-
-
-Underfull \hbox (badness 1817) in paragraph at lines 92--93
-\OT1/cmr/m/n/10.95 (ra-tioning) mech-a-nism, in which
- []
-
-
-Underfull \hbox (badness 2318) in paragraph at lines 94--95
-[]\OT1/cmr/m/n/10.95 As the au-thors point out, this
- []
-
-
-Underfull \hbox (badness 2368) in paragraph at lines 100--101
-\OT1/cmr/m/n/10.95 ex-post fair-ness in-clude the fol-
- []
-
-
-Underfull \hbox (badness 1708) in paragraph at lines 100--101
-\OT1/cmr/m/n/10.95 low-ing (these are less con-crete).
- []
-
-
-Underfull \hbox (badness 1270) in paragraph at lines 100--101
-\OT1/cmr/m/n/10.95 ef-fi-ciency for less ran-dom-iza-tion?
- []
-
-[4]
-Underfull \hbox (badness 1210) in paragraph at lines 106--107
-\OT1/cmr/m/n/10.95 ers[] ([]2020[]) value rev-enue gen-er-a-
- []
-
-
-Underfull \hbox (badness 2376) in paragraph at lines 106--107
-\OT1/cmr/m/n/10.95 tion by giv-ing rev-enue its own
- []
-
-
-Underfull \hbox (badness 4353) in paragraph at lines 106--107
-\OT1/cmr/m/n/10.95 Pareto weight, rep-re-sent-ing the
- []
-
-
-Underfull \hbox (badness 1776) in paragraph at lines 110--111
-\OT1/cmr/m/n/10.95 of het-ero-ge-neous qual-ity. That
- []
-
-
-Overfull \hbox (10.85573pt too wide) detected at line 121
-\OML/cmm/m/it/10.95 u\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x[]; x[]\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 v[]; v[]\OT1/cmr/m/n/10.95 ) = \OML/cmm/m/it/10.95 v[]x[] \OT1/cmr/m/n/10.95 + [](\OML/cmm/m/it/10.95 v[]x[] \OT1/cmr/m/n/10.95 + 1)\OML/cmm/m/it/10.95 :
- []
-
-[5] (/Users/etang/stanford-classes/honors-thesis/lit-reviews/inequality-design-condensed/inequality-design.bbl
-
-LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 9.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--11
-[]\OT1/cmr/bx/n/10.95 Akbarpour, Mo-ham-mad, Pi-otr
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--11
-\OT1/cmr/bx/n/10.95 Dwor-czak, and Scott Duke
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--11
-\OT1/cmr/bx/n/10.95 Komin-ers. \OT1/cmr/m/n/10.95 2020. ``Re-dis-tribu-tive
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--11
-\OT1/cmr/m/n/10.95 Al-lo-ca-tion Mech-a-nisms.'' \OT1/cmr/m/it/10.95 Work-ing
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 31--33
-[]\OT1/cmr/bx/n/10.95 Dworczak, Pi-otr, Scott Duke
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 31--33
-\OT1/cmr/bx/n/10.95 Komin-ers, and Mo-ham-mad
- []
-
-
-Underfull \hbox (badness 2951) in paragraph at lines 31--33
-\OT1/cmr/bx/n/10.95 Ak-bar-pour. \OT1/cmr/m/n/10.95 2020. ``Re-dis-tri-bu-tion
- []
-
-
-Underfull \hbox (badness 1072) in paragraph at lines 36--40
-\OT1/cmr/bx/n/10.95 M. Utku []Unver, and M. Bu-
- []
-
+ [3] [4] [5] [6] [7]
+LaTeX Font Info:    Try loading font information for U+bbm on input line 185.
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/bbm-macros/ubbm.fd
+File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 177.
- [6]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 177.
- (/Users/etang/stanford-classes/honors-thesis/lit-reviews/inequality-design-condensed/inequality-design.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 177.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 177.
+Overfull \hbox (32.25697pt too wide) detected at line 192
+[][] [][] \U/bbm/m/n/10.95 1\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 w\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 p[] \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 R \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 p[]Q\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^U \OML/cmm/m/it/10.95 w\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 R \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 p[]Q\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 ) + \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 ]\OML/cmm/m/it/10.95 w\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 p[] \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 R \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 p[]Q\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 dF\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 v[]; v[]\OT1/cmr/m/n/10.95 )
+ []
+
+
+Overfull \hbox (45.72095pt too wide) detected at line 200
+[][] [][] \U/bbm/m/n/10.95 1\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 w\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 R \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 p[]Q\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^U \OML/cmm/m/it/10.95 w\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 R \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 p[]Q\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 ) + \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 ](\OML/cmm/m/it/10.95 v[] \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 w\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 R \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 p[]Q\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 ))\OML/cmm/m/it/10.95 dF\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 v[]; v[]\OT1/cmr/m/n/10.95 )
+ []
+
+
+Underfull \vbox (badness 4467) has occurred while \output is active []
+
+ [8]
+Overfull \hbox (15.25479pt too wide) detected at line 206
+[] [][] \U/bbm/m/n/10.95 1\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 w\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 R \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 p[]Q\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^T \OML/cmm/m/it/10.95 w\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 R \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 p[]Q\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 ) + \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 ](\OML/cmm/m/it/10.95 v[] \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 w\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 R \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 p[]Q\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 ))\OML/cmm/m/it/10.95 dF\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 v[]; v[]\OT1/cmr/m/n/10.95 )
+ []
+
+
+Overfull \hbox (83.4371pt too wide) detected at line 216
+[]
+ []
+
+
+Overfull \hbox (83.4371pt too wide) in alignment at lines 215--216
+[] [] 
+ []
+
+(/Users/etang/stanford-classes/honors-thesis/redistribution-report-284/paper_slides/inequality-design.bbl [9])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 276.
+ [10]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 276.
+ (/Users/etang/stanford-classes/honors-thesis/redistribution-report-284/paper_slides/inequality-design.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 276.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 276.
 Package rerunfilecheck Info: File `inequality-design.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 0.88pt have occurred.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 177.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 276.
  ) 
 Here is how much of TeX's memory you used:
- 5426 strings out of 492616
- 80309 string characters out of 6129482
- 178516 words of memory out of 5000000
- 9311 multiletter control sequences out of 15000+600000
- 9940 words of font info for 36 fonts, out of 8000000 for 9000
+ 5804 strings out of 492616
+ 86822 string characters out of 6129482
+ 187388 words of memory out of 5000000
+ 9654 multiletter control sequences out of 15000+600000
+ 10536 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,6n,23p,1015b,397s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb>
-Output written on /Users/etang/stanford-classes/honors-thesis/lit-reviews/inequality-design-condensed/inequality-design.pdf (6 pages, 160326 bytes).
+ 34i,16n,23p,1014b,451s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </Users/etang/Library/texlive/2019/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb>
+Output written on /Users/etang/stanford-classes/honors-thesis/redistribution-report-284/paper_slides/inequality-design.pdf (10 pages, 195690 bytes).
 PDF statistics:
- 171 PDF objects out of 1000 (max. 8388607)
- 150 compressed objects within 2 object streams
- 25 named destinations out of 1000 (max. 500000)
+ 217 PDF objects out of 1000 (max. 8388607)
+ 188 compressed objects within 2 object streams
+ 43 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
