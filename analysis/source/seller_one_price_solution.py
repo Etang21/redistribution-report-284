@@ -12,6 +12,8 @@ import numpy as np
 from scipy.stats import uniform
 from scipy.integrate import dblquad
 
+import plotly.express as px
+
 NUM_GOOD_TYPES = 10 # Number of discrete types for good valuations
 NUM_MONEY_TYPES = 10 # Number of discrete types for money valuations
 
@@ -36,21 +38,24 @@ def main():
 
 
     # TODO (will move this to get objective), computes tau
-    p_s = 0.9
-    tau = get_tau(rv_vK_S, rv_vM_S, p_s, REVENUE, QUANTITY)
-    print("tau is: " + str(tau))
+    p_s = 0.3 
+    prices = [0.1 * i for i in range(5, 20)]
+    plot_total_welfares(rv_vK_S, rv_vK_S, prices)
 
-    # Define objective
-    print("Total welfare objective for price " + str(p_s) + 
-            " is: " + str(get_total_welfare(rv_vK_S, rv_vM_S, p_s, REVENUE, QUANTITY)))
-
-
+    # Plot objective
 
     # Define constraints
 
-
-
     # Optimize
+
+
+def plot_total_welfares(rv_vK_S, rv_vM_S, prices):
+    """ Plots total welfare for a series of prices """
+    welfares = [get_total_welfare(rv_vK_S, rv_vM_S, p_s, REVENUE, QUANTITY) for p_s in prices]
+    print("Prices: " + str(prices))
+    print("Welfares: " + str(welfares))
+    fig = px.line(x=prices, y=welfares, title="Welfare vs. Prices for Single-Price Mechanisms")
+    fig.show()
 
 
 def utility_for_money(xM, vM):
@@ -59,8 +64,8 @@ def utility_for_money(xM, vM):
     The functional form of this utility function can be changed according to constraints
     laid out in the paper.
     """
-    return np.log(xM * vM + 1)
-    # return xM * vM
+    # return np.log(xM * vM + 1)
+    return xM * vM
 
 def get_total_welfare(rv_vK_S, rv_vM_S, p_s, R, Q):
     """ Total expected welfare of agents for given distribution, price, revenue, quantity """
@@ -68,6 +73,7 @@ def get_total_welfare(rv_vK_S, rv_vM_S, p_s, R, Q):
 
     # Check that enough agents want to sell
     if tau < Q:
+        print("Not enough sellers willing to sell (tau < Q) at price " + str(p_s))
         return 0
 
     # Utility for agents who sell
@@ -76,7 +82,7 @@ def get_total_welfare(rv_vK_S, rv_vM_S, p_s, R, Q):
                                         rv_vK_S.pdf(vK) * rv_vM_S.pdf(vM),
                                         low_vM_sellers, up_vM_sellers,
                                         lambda vM: low_vK_sellers, lambda vM: up_vK_sellers,
-                                        epsabs=0.0001)[0]
+                                        epsabs=0.01)[0]
 
     # Utility for agents who want to sell but are rationed out
     failed_sale_utilities = ((tau - Q) / Q) * dblquad(
@@ -85,7 +91,7 @@ def get_total_welfare(rv_vK_S, rv_vM_S, p_s, R, Q):
                                     rv_vK_S.pdf(vK) * rv_vM_S.pdf(vM),
                                     low_vM_sellers, up_vM_sellers,
                                     lambda vM: low_vK_sellers, lambda vM: up_vK_sellers,
-                                    epsabs=0.0001
+                                    epsabs=0.01
                                 )[0]
     
     # Utility for agents who do not want to sell
@@ -95,7 +101,7 @@ def get_total_welfare(rv_vK_S, rv_vM_S, p_s, R, Q):
                             rv_vK_S.pdf(vK) * rv_vM_S.pdf(vM),
                             low_vM_sellers, up_vM_sellers,
                             lambda vM: low_vK_sellers, lambda vM: up_vK_sellers,
-                            epsabs=0.0001
+                            epsabs=0.01
                         )[0]
 
     # Sum total agent utilities

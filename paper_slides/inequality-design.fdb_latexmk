@@ -1,15 +1,15 @@
 # Fdb version 3
-["bibtex inequality-design"] 1621394267 "inequality-design.aux" "inequality-design.bbl" "inequality-design" 1621465442
+["bibtex inequality-design"] 1621473398 "inequality-design.aux" "inequality-design.bbl" "inequality-design" 1621473400
   "./aea.bst" 1621204183 23105 ced7c75addb710fdb85503a64b9bafa7 ""
-  "inequality-design.aux" 1621465442 3639 b276ed8f613839157d44a5e236f20088 "pdflatex"
+  "inequality-design.aux" 1621473399 3747 f24e1e2fa3b21bea6ff93810d2b42d67 "pdflatex"
   "inequality-design.bib" 1621206287 3474 b68cdcb3f4e78ceb96d47e7d5f9e02e6 ""
   (generated)
   "inequality-design.blg"
   "inequality-design.bbl"
-["pdflatex"] 1621465442 "/Users/etang/stanford-classes/honors-thesis/redistribution-report-284/paper_slides/inequality-design.tex" "/Users/etang/stanford-classes/honors-thesis/redistribution-report-284/paper_slides/inequality-design.pdf" "inequality-design" 1621465442
+["pdflatex"] 1621473399 "/Users/etang/stanford-classes/honors-thesis/redistribution-report-284/paper_slides/inequality-design.tex" "/Users/etang/stanford-classes/honors-thesis/redistribution-report-284/paper_slides/inequality-design.pdf" "inequality-design" 1621473400
   "/Users/etang/Library/texlive/2019/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk" 1586131907 7808 a1e513080bc7efe0bea3894f95817ed0 ""
-  "/Users/etang/stanford-classes/honors-thesis/redistribution-report-284/paper_slides/inequality-design.aux" 1621465442 3639 b276ed8f613839157d44a5e236f20088 ""
-  "/Users/etang/stanford-classes/honors-thesis/redistribution-report-284/paper_slides/inequality-design.tex" 1621465441 31755 b6fb86a377261d04df419ab93b9684b0 ""
+  "/Users/etang/stanford-classes/honors-thesis/redistribution-report-284/paper_slides/inequality-design.aux" 1621473399 3747 f24e1e2fa3b21bea6ff93810d2b42d67 ""
+  "/Users/etang/stanford-classes/honors-thesis/redistribution-report-284/paper_slides/inequality-design.tex" 1621473396 32181 ebe308a18b366424c64158f12bc59517 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -77,16 +77,16 @@
   "/usr/local/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt" 1557342086 4259635 562fc36ec496993777a6c428d8bfb811 ""
   "/usr/local/texlive/2019/texmf.cnf" 1557341546 577 d150fef99ac436ad1156e86b0892f6ef ""
   "AEA.cls" 1621204183 44747 4d201f2a1df32318add00ffd1b03f030 ""
-  "inequality-design.aux" 1621465442 3639 b276ed8f613839157d44a5e236f20088 "pdflatex"
-  "inequality-design.bbl" 1621394268 2163 f1e248b824b3a6be7ab18892c3100651 "bibtex inequality-design"
-  "inequality-design.out" 1621465442 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "inequality-design.tex" 1621465441 31755 b6fb86a377261d04df419ab93b9684b0 ""
+  "inequality-design.aux" 1621473399 3747 f24e1e2fa3b21bea6ff93810d2b42d67 "pdflatex"
+  "inequality-design.bbl" 1621473399 2163 f1e248b824b3a6be7ab18892c3100651 "bibtex inequality-design"
+  "inequality-design.out" 1621473399 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "inequality-design.tex" 1621473396 32181 ebe308a18b366424c64158f12bc59517 ""
   "multicol.sty" 1621204183 25928 526edd03c609ff2cdc4805a41441008e ""
   "setspace.sty" 1621204183 22518 969fcbccb9feb6c080f52825bb5fe1e1 ""
   (generated)
-  "inequality-design.pdf"
   "inequality-design.log"
-  "inequality-design.out"
-  "/Users/etang/stanford-classes/honors-thesis/redistribution-report-284/paper_slides/inequality-design.pdf"
+  "inequality-design.pdf"
   "/Users/etang/stanford-classes/honors-thesis/redistribution-report-284/paper_slides/inequality-design.log"
   "inequality-design.aux"
+  "/Users/etang/stanford-classes/honors-thesis/redistribution-report-284/paper_slides/inequality-design.pdf"
+  "inequality-design.out"
