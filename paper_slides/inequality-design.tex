@@ -145,13 +145,13 @@ where $w$ denotes agents' utility for money, parametrized by their marginal util
     \item For all $x^M$ and all $v^{M'} > v^M$, $w(x^M; v^{M'}) > w(x^M; v^M)$ (increasing in $v^M$)
 \end{enumerate}
 
-Specifying the model, one possible model for the utility for a risk-averse agent receiving quantities $x^K$ and $x^M$ of the two goods, respectively, is given with a logarithmic valuation for money $w$, so
+In this work, we will specify the utility function for money as an exponential function, which allows us to interpolate between highly concave and mildly concave functions. For a risk-averse agent receiving quantities $x^V$ and $x^M$ of the good and of money, respectively, we may define their utility as
 
 $$
-u(x^K, x^M; v^k, v^M) = v^K x^K + \log(v^M x^M + 1).
+u(x^K, x^M; v^K, v^M) =  v^K x^K + (v^M x^M + 1)^k
 $$
 
-Note here that the marginal utility for good $K$ is indeed $v^K$, and when the agent receives no money, the marginal utility for money is $v^M$.
+for some $k \in (0,1)$. Note here that our chosen utility for money, $w(x^M; v^M) = (v^M x^M+1)^k$ satisfies our three desired criteria. Furthemore, $k$ lets us select more concave functions at lower values of $k$, and nearly linear functions for higher values of $k$. \footnote{Other specifications for $w$ are possible and satisfy our criteria, such as $w(x^M; v^M) = \log(v^M x^M + 1)$, but here we focus on our exponential specification.}
 
 % TODO: Flesh this out to find a class of possible functions w so that we can interpolate between "very concave" functions and "nearly linear" functions w. This may entail, for some given w, taking some parameter k which shifts and interpolates w as necessary to get the result we want.
 

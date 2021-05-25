@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  19 MAY 2021 18:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  25 MAY 2021 14:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -305,15 +305,12 @@ Overfull \hbox (32.25697pt too wide) detected at line 192
 [][] [][] \U/bbm/m/n/10.95 1\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 w\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 p[] \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 R \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 p[]Q\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^U \OML/cmm/m/it/10.95 w\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 R \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 p[]Q\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 ) + \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 ]\OML/cmm/m/it/10.95 w\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 p[] \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 R \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 p[]Q\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 dF\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 v[]; v[]\OT1/cmr/m/n/10.95 )
  []
 
-
+[8]
 Overfull \hbox (45.72095pt too wide) detected at line 200
 [][] [][] \U/bbm/m/n/10.95 1\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 w\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 R \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 p[]Q\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^U \OML/cmm/m/it/10.95 w\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 R \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 p[]Q\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 ) + \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 ](\OML/cmm/m/it/10.95 v[] \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 w\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 R \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 p[]Q\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 ))\OML/cmm/m/it/10.95 dF\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 v[]; v[]\OT1/cmr/m/n/10.95 )
  []
 
 
-Underfull \vbox (badness 4467) has occurred while \output is active []
-
- [8]
 Overfull \hbox (15.25479pt too wide) detected at line 206
 [] [][] \U/bbm/m/n/10.95 1\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 w\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 R \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 p[]Q\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^T \OML/cmm/m/it/10.95 w\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 R \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 p[]Q\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 ) + \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 ](\OML/cmm/m/it/10.95 v[] \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 w\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 R \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 p[]Q\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 ))\OML/cmm/m/it/10.95 dF\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 v[]; v[]\OT1/cmr/m/n/10.95 )
  []
@@ -340,18 +337,18 @@ Package rerunfilecheck Info: File `inequality-design.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 278.
  ) 
 Here is how much of TeX's memory you used:
- 5805 strings out of 492616
- 86831 string characters out of 6129482
+ 5806 strings out of 492616
+ 86842 string characters out of 6129482
  187388 words of memory out of 5000000
  9654 multiletter control sequences out of 15000+600000
  10536 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  34i,16n,23p,1014b,451s stack positions out of 5000i,500n,10000p,200000b,80000s
- </Users/etang/Library/texlive/2019/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb>
-Output written on /Users/etang/stanford-classes/honors-thesis/redistribution-report-284/paper_slides/inequality-design.pdf (10 pages, 196448 bytes).
+ </Users/etang/Library/texlive/2019/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb>
+Output written on /Users/etang/stanford-classes/honors-thesis/redistribution-report-284/paper_slides/inequality-design.pdf (10 pages, 207113 bytes).
 PDF statistics:
- 218 PDF objects out of 1000 (max. 8388607)
- 189 compressed objects within 2 object streams
- 44 named destinations out of 1000 (max. 500000)
+ 224 PDF objects out of 1000 (max. 8388607)
+ 194 compressed objects within 2 object streams
+ 45 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
