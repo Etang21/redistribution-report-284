@@ -20,8 +20,8 @@ NUM_MONEY_TYPES = 10 # Number of discrete types for money valuations
 low_vK_sellers = 0
 up_vK_sellers = 1
 
-low_vM_sellers = 0
-up_vM_sellers = 2
+low_vM_sellers = 0.5
+up_vM_sellers = 2.0
 
 REVENUE = 1.0
 QUANTITY = 0.2
@@ -36,13 +36,9 @@ def main():
     rv_vM_S = uniform(loc=low_vM_sellers, scale=(up_vM_sellers - low_vM_sellers))
     print("Mean of seller valuations for money: " + str(rv_vM_S.mean()))
 
-
-    # TODO (will move this to get objective), computes tau
-    p_s = 0.3 
-    prices = [0.1 * i for i in range(5, 20)]
-    plot_total_welfares(rv_vK_S, rv_vK_S, prices)
-
-    # Plot objective
+    # Plot total welfare for various prices
+    prices = [0.4 * i for i in range(0, 55)]
+    plot_total_welfares(rv_vK_S, rv_vM_S, prices)
 
     # Define constraints
 
@@ -85,7 +81,7 @@ def get_total_welfare(rv_vK_S, rv_vM_S, p_s, R, Q):
                                         epsabs=0.01)[0]
 
     # Utility for agents who want to sell but are rationed out
-    failed_sale_utilities = ((tau - Q) / Q) * dblquad(
+    failed_sale_utilities = ((tau - Q) / tau) * dblquad(
                                     lambda vK, vM: int(will_seller_sell(vK, vM, p_s, R, Q)) * 
                                     get_seller_no_sale_utility(vK, vM, p_s, R, Q) *
                                     rv_vK_S.pdf(vK) * rv_vM_S.pdf(vM),
