@@ -42,14 +42,9 @@ def main():
     rv_vM_S = uniform(loc=low_vM_sellers, scale=(up_vM_sellers - low_vM_sellers))
     print("Mean of seller valuations for money: " + str(rv_vM_S.mean()))
 
-    # Define grids of valuations for good and money
-    vK_grid_1d = np.linspace(low_vK_sellers, up_vK_sellers, NUM_GOOD_TYPES)
-    vM_grid_1d = np.linspace(low_vM_sellers, up_vM_sellers, NUM_MONEY_TYPES)
-
     # Test out discrete valuation function
     discrete_welfare = get_total_welfare_discretized(lambda xM, vM: exp_utility_for_money(xM, vM, 0.5),
-                                                        rv_vK_S, rv_vM_S, 2, REVENUE, QUANTITY,
-                                                        vK_grid_1d, vM_grid_1d)
+                                                        rv_vK_S, rv_vM_S, 2, REVENUE, QUANTITY)
     print("Discrete welfare: " + str(discrete_welfare))
 
     # Plot total welfare for various prices
@@ -57,7 +52,6 @@ def main():
     plot_total_welfares(rv_vK_S, rv_vM_S, prices, 0.5)
 
     # Optimize
-
 
 def plot_total_welfares(rv_vK_S, rv_vM_S, prices, k):
     """ 
@@ -86,21 +80,22 @@ def plot_total_welfares(rv_vK_S, rv_vM_S, prices, k):
                             F"Exp. utility for money: w(xM; vM) = (xM * vM + 1)^{k}",
                         xref="paper", yref="paper",
                         x=1.0, y=-0.1, showarrow=False)
-
-                            
+     
     fig.show()
 
 
 """ Functions to dicretely compute total welfare for agents at a given price, revenue, and quantity """
 
-def get_total_welfare_discretized(utility_for_money, rv_vK_S, rv_vM_S, p_s, R, Q, vK_grid_1d, vM_grid_1d):
+def get_total_welfare_discretized(utility_for_money, rv_vK_S, rv_vM_S, p_s, R, Q):
     """ Total expected welfare of agents for given distribution, price, revenue, quantity """
     
-    # Make a grid of good valuations with extra axis
+    # Make grids of good and money valuations
+    vK_grid_1d = np.linspace(low_vK_sellers, up_vK_sellers, NUM_GOOD_TYPES)
+    vM_grid_1d = np.linspace(low_vM_sellers, up_vM_sellers, NUM_MONEY_TYPES)
     vK_grid_2d = vK_grid_1d[:, None]
 
     # Compute number of agents who want to sell, and check that enough want to sell
-    tau = get_tau_discretized(utility_for_money, rv_vK_S, rv_vM_S, p_s, R, Q, vK_grid_1d, vM_grid_1d)
+    tau = get_tau_discretized(utility_for_money, rv_vK_S, rv_vM_S, p_s, R, Q)
     if tau < Q:
         print("Not enough sellers willing to sell (tau < Q) at price " + str(p_s))
         return 0
@@ -126,11 +121,16 @@ def get_total_welfare_discretized(utility_for_money, rv_vK_S, rv_vM_S, p_s, R, Q
     # Sum total agent utilities
     return sale_utilities + failed_sale_utilities + no_sale_utilities
 
-def get_tau_discretized(utility_for_money, rv_vK_S, rv_vM_S, p_s, R, Q, vK_grid_1d, vM_grid_1d):
+
+def get_tau_discretized(utility_for_money, rv_vK_S, rv_vM_S, p_s, R, Q):
     """
     Computes tau, the proportion of sellers who are willing to sell.
     """
+    # Make grids of good and money valuations
+    vK_grid_1d = np.linspace(low_vK_sellers, up_vK_sellers, NUM_GOOD_TYPES)
+    vM_grid_1d = np.linspace(low_vM_sellers, up_vM_sellers, NUM_MONEY_TYPES)
     vK_grid_2d = vK_grid_1d[:, None]
+
     will_sell_grid = will_seller_sell(utility_for_money, vK_grid_2d, vM_grid_1d, p_s, R, Q) * \
                         rv_vK_S.pdf(vK_grid_2d) * rv_vM_S.pdf(vM_grid_1d),
     return simps(simps(will_sell_grid, vM_grid_1d), vK_grid_1d)
