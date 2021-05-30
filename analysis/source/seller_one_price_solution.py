@@ -9,11 +9,12 @@ and when agents have non-linear preferences for money.
 """
 
 import numpy as np
+import pandas as pd
+
 from scipy.stats import uniform
 from scipy.integrate import dblquad
 from scipy.integrate import simps
-
-import pandas as pd
+from scipy.optimize import minimize_scalar
 import plotly.express as px
 
 # Number of discrete types for good and money valuations
@@ -42,16 +43,20 @@ def main():
     rv_vM_S = uniform(loc=low_vM_sellers, scale=(up_vM_sellers - low_vM_sellers))
     print("Mean of seller valuations for money: " + str(rv_vM_S.mean()))
 
-    # Test out discrete valuation function
-    discrete_welfare = get_total_welfare_discretized(lambda xM, vM: exp_utility_for_money(xM, vM, 0.5),
-                                                        rv_vK_S, rv_vM_S, 2, REVENUE, QUANTITY)
-    print("Discrete welfare: " + str(discrete_welfare))
+    # Get welfare-maximizing prices for each utility function
+    print(get_welfare_maximizing_price(linear_utility_for_money, rv_vK_S, rv_vM_S))
 
     # Plot total welfare for various prices
     prices = [0.1 * i for i in range(0, 25)]
     plot_total_welfares(rv_vK_S, rv_vM_S, prices, 0.5)
 
     # Optimize
+
+def get_welfare_maximizing_price(utility_for_money, rv_vK_S, rv_vM_S):
+    return minimize_scalar(lambda p_s: -get_total_welfare_discretized(utility_for_money, rv_vK_S, rv_vM_S, 
+                                                                      p_s, REVENUE, QUANTITY))
+
+""" Function to plot total welfares """
 
 def plot_total_welfares(rv_vK_S, rv_vM_S, prices, k):
     """ 
@@ -64,9 +69,12 @@ def plot_total_welfares(rv_vK_S, rv_vM_S, prices, k):
     # Compute total welfares
     df = pd.DataFrame()
     df['Price'] = prices
-    df['Exponential Welfare'] = [get_total_welfare(lambda xM, vM: exp_utility_for_money(xM, vM, k), 
-                                            rv_vK_S, rv_vM_S, p_s, REVENUE, QUANTITY) for p_s in prices]
-    df['Linear Welfare'] = [get_total_welfare(linear_utility_for_money, rv_vK_S, rv_vM_S, p_s, REVENUE, QUANTITY) for p_s in prices]
+    df['Exponential Welfare'] = [get_total_welfare_discretized(lambda xM, vM: exp_utility_for_money(xM, vM, k), 
+                                                                rv_vK_S, rv_vM_S, p_s, REVENUE, QUANTITY) 
+                                for p_s in prices]
+    df['Linear Welfare'] = [get_total_welfare_discretized(linear_utility_for_money, rv_vK_S, rv_vM_S, p_s, REVENUE, QUANTITY) 
+                                for p_s in prices]
+    print(df)
 
     # Plot welfares on chart
     fig = px.scatter(df, x='Price', y=['Linear Welfare', 'Exponential Welfare'],
@@ -104,19 +112,19 @@ def get_total_welfare_discretized(utility_for_money, rv_vK_S, rv_vM_S, p_s, R, Q
     sale_utilities_grid = will_seller_sell(utility_for_money, vK_grid_2d, vM_grid_1d, p_s, R, Q) * \
                             get_seller_sale_utility(utility_for_money, vK_grid_2d, vM_grid_1d, p_s, R, Q) * \
                             rv_vK_S.pdf(vK_grid_2d) * rv_vM_S.pdf(vM_grid_1d)
-    sale_utilities = (Q / tau) * simps(simps(sale_utilities_grid, vM_grid_1d), vK_grid_1d)
+    sale_utilities = (Q / tau) * simps(simps(sale_utilities_grid, vM_grid_1d), vK_grid_1d).item()
 
     # Utility for agents who want to sell but are rationed out
     failed_sale_utilities_grid = will_seller_sell(utility_for_money, vK_grid_2d, vM_grid_1d, p_s, R, Q) * \
                                     get_seller_no_sale_utility(utility_for_money, vK_grid_2d, vM_grid_1d, p_s, R, Q) * \
                                     rv_vK_S.pdf(vK_grid_2d) * rv_vM_S.pdf(vM_grid_1d)
-    failed_sale_utilities = ((tau - Q) / tau) * simps(simps(failed_sale_utilities_grid, vM_grid_1d), vK_grid_1d)
+    failed_sale_utilities = ((tau - Q) / tau) * simps(simps(failed_sale_utilities_grid, vM_grid_1d), vK_grid_1d).item()
     
     # Utility for agents who do not want to sell
     no_sale_utilities_grid = (~will_seller_sell(utility_for_money, vK_grid_2d, vM_grid_1d, p_s, R, Q)) * \
                             get_seller_no_sale_utility(utility_for_money, vK_grid_2d, vM_grid_1d, p_s, R, Q) * \
                             rv_vK_S.pdf(vK_grid_2d) * rv_vM_S.pdf(vM_grid_1d)
-    no_sale_utilities = simps(simps(no_sale_utilities_grid, vM_grid_1d), vK_grid_1d)
+    no_sale_utilities = simps(simps(no_sale_utilities_grid, vM_grid_1d), vK_grid_1d).item()
 
     # Sum total agent utilities
     return sale_utilities + failed_sale_utilities + no_sale_utilities
@@ -133,7 +141,7 @@ def get_tau_discretized(utility_for_money, rv_vK_S, rv_vM_S, p_s, R, Q):
 
     will_sell_grid = will_seller_sell(utility_for_money, vK_grid_2d, vM_grid_1d, p_s, R, Q) * \
                         rv_vK_S.pdf(vK_grid_2d) * rv_vM_S.pdf(vM_grid_1d),
-    return simps(simps(will_sell_grid, vM_grid_1d), vK_grid_1d)
+    return simps(simps(will_sell_grid, vM_grid_1d), vK_grid_1d).item()
 
 
 """ Functions to compute utility for individual agents """
