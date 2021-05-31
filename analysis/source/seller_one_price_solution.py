@@ -18,8 +18,8 @@ from scipy.optimize import minimize_scalar
 import plotly.express as px
 
 # Number of discrete types for good and money valuations
-NUM_GOOD_TYPES = 10 
-NUM_MONEY_TYPES = 10
+NUM_GOOD_TYPES = 100 
+NUM_MONEY_TYPES = 100
 
 # Lower and upper bound on valuations for good
 low_vK_sellers = 0
@@ -45,6 +45,10 @@ def main():
 
     # Get welfare-maximizing prices for each utility function
     print(get_welfare_maximizing_price(linear_utility_for_money, rv_vK_S, rv_vM_S))
+    print(get_competitive_price(linear_utility_for_money, rv_vK_S, rv_vM_S))
+
+    print(get_welfare_maximizing_price(lambda xM, vM: exp_utility_for_money(xM, vM, 0.5), rv_vK_S, rv_vM_S))
+    print(get_competitive_price(lambda xM, vM: exp_utility_for_money(xM, vM, 0.5), rv_vK_S, rv_vM_S))
 
     # Plot total welfare for various prices
     prices = [0.1 * i for i in range(0, 25)]
@@ -52,9 +56,27 @@ def main():
 
     # Optimize
 
+
 def get_welfare_maximizing_price(utility_for_money, rv_vK_S, rv_vM_S):
-    return minimize_scalar(lambda p_s: -get_total_welfare_discretized(utility_for_money, rv_vK_S, rv_vM_S, 
+    """ 
+    Return welfare-maximizing price for given distribution and utility for money.
+    Returns (price, welfare) of this price.
+    """
+    res = minimize_scalar(lambda p_s: -get_total_welfare_discretized(utility_for_money, rv_vK_S, rv_vM_S, 
                                                                       p_s, REVENUE, QUANTITY))
+    return res.x, res.fun
+
+def get_competitive_price(utility_for_money, rv_vK_S, rv_vM_S):
+    """ 
+    Get competitive price for given specification.
+    Returns (price, |Q - sold|) for specification.
+    """
+    tau_quantity_difference = lambda p_s: abs(QUANTITY - 
+                                              get_tau_discretized(utility_for_money, 
+                                                                    rv_vK_S, rv_vM_S, p_s,
+                                                                    REVENUE, QUANTITY))
+    res = minimize_scalar(tau_quantity_difference)
+    return res.x, res.fun
 
 """ Function to plot total welfares """
 
@@ -74,7 +96,6 @@ def plot_total_welfares(rv_vK_S, rv_vM_S, prices, k):
                                 for p_s in prices]
     df['Linear Welfare'] = [get_total_welfare_discretized(linear_utility_for_money, rv_vK_S, rv_vM_S, p_s, REVENUE, QUANTITY) 
                                 for p_s in prices]
-    print(df)
 
     # Plot welfares on chart
     fig = px.scatter(df, x='Price', y=['Linear Welfare', 'Exponential Welfare'],
