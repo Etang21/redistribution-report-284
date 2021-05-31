@@ -12,13 +12,17 @@ import numpy as np
 import pandas as pd
 
 from scipy.stats import uniform
+from scipy.stats import beta
+from scipy.stats import genpareto
+from scipy.stats import pareto
+
 from scipy.integrate import dblquad
 from scipy.integrate import simps
 from scipy.optimize import minimize_scalar
 import plotly.express as px
 
 # Number of discrete types for good and money valuations
-NUM_GOOD_TYPES = 100 
+NUM_GOOD_TYPES = 100
 NUM_MONEY_TYPES = 100
 
 # Lower and upper bound on valuations for good
@@ -26,12 +30,12 @@ low_vK_sellers = 0
 up_vK_sellers = 1
 
 # Lower and upper bound on valuations for money
-low_vM_sellers = 0.5
-up_vM_sellers = 2.0
+low_vM_sellers = 1
+up_vM_sellers = 2
 
 # Desired revenue and quantity
-REVENUE = 1.0
-QUANTITY = 0.2
+REVENUE = 2.0
+QUANTITY = 0.15
 
 
 def main():
@@ -43,42 +47,43 @@ def main():
     rv_vM_S = uniform(loc=low_vM_sellers, scale=(up_vM_sellers - low_vM_sellers))
     print("Mean of seller valuations for money: " + str(rv_vM_S.mean()))
 
-    # Get welfare-maximizing prices for each utility function
+    # Plot welfare-maximizing prices for each possible utility function
     print(get_welfare_maximizing_price(linear_utility_for_money, rv_vK_S, rv_vM_S))
     print(get_competitive_price(linear_utility_for_money, rv_vK_S, rv_vM_S))
 
-    print(get_welfare_maximizing_price(lambda xM, vM: exp_utility_for_money(xM, vM, 0.5), rv_vK_S, rv_vM_S))
-    print(get_competitive_price(lambda xM, vM: exp_utility_for_money(xM, vM, 0.5), rv_vK_S, rv_vM_S))
+    k_list = np.linspace(0.2, 1, 80)
+    plot_competitive_and_welfare_maximizing_prices(rv_vK_S, rv_vM_S, k_list)
 
     # Plot total welfare for various prices
-    prices = [0.1 * i for i in range(0, 25)]
-    plot_total_welfares(rv_vK_S, rv_vM_S, prices, 0.5)
+    # prices = np.linspace(0, 10, 100)
+    # plot_total_welfares(rv_vK_S, rv_vM_S, prices, k)
 
-    # Optimize
-
-
-def get_welfare_maximizing_price(utility_for_money, rv_vK_S, rv_vM_S):
-    """ 
-    Return welfare-maximizing price for given distribution and utility for money.
-    Returns (price, welfare) of this price.
-    """
-    res = minimize_scalar(lambda p_s: -get_total_welfare_discretized(utility_for_money, rv_vK_S, rv_vM_S, 
-                                                                      p_s, REVENUE, QUANTITY))
-    return res.x, res.fun
-
-def get_competitive_price(utility_for_money, rv_vK_S, rv_vM_S):
-    """ 
-    Get competitive price for given specification.
-    Returns (price, |Q - sold|) for specification.
-    """
-    tau_quantity_difference = lambda p_s: abs(QUANTITY - 
-                                              get_tau_discretized(utility_for_money, 
-                                                                    rv_vK_S, rv_vM_S, p_s,
-                                                                    REVENUE, QUANTITY))
-    res = minimize_scalar(tau_quantity_difference)
-    return res.x, res.fun
 
 """ Function to plot total welfares """
+
+def plot_competitive_and_welfare_maximizing_prices(rv_vK_S, rv_vM_S, k_list):
+    """
+    Plots competitive price and welfare-maximizing prices for several choices of k.
+    Recall that k parametrizes the concavity of our agents' utilities for money.
+    """
+    utilities_for_money = [lambda xM, vM, concavity=k: exp_utility_for_money(xM, vM, concavity) for k in k_list]
+
+    # Set up pandas dataframe of welfares
+    df = pd.DataFrame()
+    df['k'] = k_list
+    df['Competitive Price'] = [get_competitive_price(w, rv_vK_S, rv_vM_S)[0] for w in utilities_for_money]
+    df['Welfare-Maximizing Price'] = [get_welfare_maximizing_price(w, rv_vK_S, rv_vM_S)[0] for w in utilities_for_money]
+
+    fig = px.scatter(df, x='k', y=['Competitive Price', 'Welfare-Maximizing Price'],
+                title="Seller-side Single-price Mechanisms: Concavity of Utility vs. Welfare-Maximizing Price",
+                labels = {
+                    'value': 'Price'
+                })
+    fig.add_annotation(text=F"R = {REVENUE}. Q = {QUANTITY}. vK ~ U(0, 1). vM ~ U(0,1). <br>" + 
+                        F"Exp. utility for money: w(xM; vM) = (xM * vM + 1)^k",
+                    xref="paper", yref="paper",
+                    x=1.0, y=-0.15, showarrow=False)
+    fig.show()
 
 def plot_total_welfares(rv_vK_S, rv_vM_S, prices, k):
     """ 
@@ -112,6 +117,29 @@ def plot_total_welfares(rv_vK_S, rv_vM_S, prices, k):
      
     fig.show()
 
+""" Functions to find competitive price and optimal price """
+
+def get_welfare_maximizing_price(utility_for_money, rv_vK_S, rv_vM_S):
+    """ 
+    Return welfare-maximizing price for given distribution and utility for money.
+    Returns (price, welfare) of this price.
+    """
+    res = minimize_scalar(lambda p_s: -get_total_welfare_discretized(utility_for_money, rv_vK_S, rv_vM_S, 
+                                                                      p_s, REVENUE, QUANTITY))
+    return res.x, -res.fun
+
+def get_competitive_price(utility_for_money, rv_vK_S, rv_vM_S):
+    """ 
+    Get competitive price for given specification.
+    Returns (price, welfare, |Q - sold|) for specification.
+    """
+    tau_quantity_difference = lambda p_s: abs(QUANTITY - 
+                                              get_tau_discretized(utility_for_money, 
+                                                                    rv_vK_S, rv_vM_S, p_s,
+                                                                    REVENUE, QUANTITY))
+    res = minimize_scalar(tau_quantity_difference)
+    welfare = get_total_welfare_discretized(utility_for_money, rv_vK_S, rv_vM_S, res.x, REVENUE, QUANTITY)
+    return res.x, welfare, res.fun
 
 """ Functions to dicretely compute total welfare for agents at a given price, revenue, and quantity """
 
@@ -125,8 +153,7 @@ def get_total_welfare_discretized(utility_for_money, rv_vK_S, rv_vM_S, p_s, R, Q
 
     # Compute number of agents who want to sell, and check that enough want to sell
     tau = get_tau_discretized(utility_for_money, rv_vK_S, rv_vM_S, p_s, R, Q)
-    if tau < Q:
-        print("Not enough sellers willing to sell (tau < Q) at price " + str(p_s))
+    if tau < Q: # Not enough sellers who want to sell
         return 0
 
     # Utility for agents who successfully sell
