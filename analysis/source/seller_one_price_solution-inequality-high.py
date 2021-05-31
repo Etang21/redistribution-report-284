@@ -21,8 +21,8 @@ from scipy.optimize import minimize_scalar
 import plotly.express as px
 
 # Number of discrete types for good and money valuations
-NUM_GOOD_TYPES = 100
-NUM_MONEY_TYPES = 1000
+NUM_GOOD_TYPES = 1000
+NUM_MONEY_TYPES = 10000
 
 # Lower and upper bound on valuations for good
 low_vK_sellers = 0
@@ -75,7 +75,7 @@ def plot_competitive_and_welfare_maximizing_prices(rv_vK_S, rv_vM_S, k_list):
     df['Welfare-Maximizing Price'] = [get_welfare_maximizing_price(w, rv_vK_S, rv_vM_S)[0] for w in utilities_for_money]
 
     fig = px.scatter(df, x='k', y=['Competitive Price', 'Welfare-Maximizing Price'],
-                title="Concavity of Utility (k) vs. Price: seller-side single-price mechanisms",
+                title="Seller-side Single-price Mechanisms: Concavity of Utility vs. Welfare-Maximizing Price",
                 labels = {
                     'value': 'Price'
                 })
