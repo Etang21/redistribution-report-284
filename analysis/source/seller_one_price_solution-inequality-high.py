@@ -21,8 +21,8 @@ from scipy.optimize import minimize_scalar
 import plotly.express as px
 
 # Number of discrete types for good and money valuations
-NUM_GOOD_TYPES = 1000
-NUM_MONEY_TYPES = 10000
+NUM_GOOD_TYPES = 100
+NUM_MONEY_TYPES = 100
 
 # Lower and upper bound on valuations for good
 low_vK_sellers = 0
@@ -51,7 +51,7 @@ def main():
     print(get_welfare_maximizing_price(linear_utility_for_money, rv_vK_S, rv_vM_S))
     print(get_competitive_price(linear_utility_for_money, rv_vK_S, rv_vM_S))
 
-    k_list = np.linspace(0.2, 1, 80)
+    k_list = np.linspace(0.2, 1, 100)
     plot_competitive_and_welfare_maximizing_prices(rv_vK_S, rv_vM_S, k_list)
 
     # Plot total welfare for various prices
@@ -79,8 +79,8 @@ def plot_competitive_and_welfare_maximizing_prices(rv_vK_S, rv_vM_S, k_list):
                 labels = {
                     'value': 'Price'
                 })
-    fig.add_annotation(text=F"R = {REVENUE}. Q = {QUANTITY}. vK ~ U(0, 1). vM ~ Pareto(1/3). <br>" + 
-                        F"Exp. utility for money: w(xM; vM) = (xM * vM + 1)^k",
+    fig.add_annotation(text=r'$R = ' + str(REVENUE) + '. Q = ' + str(QUANTITY) + r'. v^K ~ U(0, 1). v^M ~ \text{Pareto}(1/3). <br>' + 
+                        r'\text{Exp. utility for money: } w(x^M; v^M) = (x^Mv^M + 1)^k/k$',
                     xref="paper", yref="paper",
                     x=1.0, y=-0.15, showarrow=False)
     fig.show()
@@ -226,7 +226,7 @@ def exp_utility_for_money(xM, vM, k):
     Satisfies three criteria for w laid out in paper.
     k: parameter in (0, 1) which determines the concavity of utility function.
     """
-    return (xM * vM + 1) ** k
+    return (1/k) * (xM * vM + 1) ** k
 
 
 """
