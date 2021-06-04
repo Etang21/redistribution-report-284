@@ -1,0 +1,43 @@
+\section{Further Reading}
+\begin{itemize}
+    \item Scheuer, F. (2014): “Entrepreneurial taxation with endogenous entry,” American Economic Journal: Economic Policy, 6, 126–63.
+            
+    \item Maybe: Saez, E., and Stantcheva, S. (2016). Generalized social marginal welfare weights for optimal tax theory. American Economic Review, 106(1), 24-45.
+        
+    \item Condorelli 2013.
+    
+    \item Kominers, S. and Teytelboym, A.: ``More Equal by Design: Economic Design Responses to Inequality". (Forthcoming book).
+
+    \item Work by Zi Yang Kang (or reach out to talk with him)
+\end{itemize}
+
+Some comments from meeting with Matt on 4/14:
+- There are generally two ways to generate relevant, interesting ideas in economic theory. You can start with theory and then find applications of that theory. Or you can start with applications and generate the theory from those applications.
+- Thinking about vaccines; what steps in the chain of vaccines are the most inequitable? Is it supply? Supply chains? Storage? Number of distribution sites? Savviness in accessing those sites?
+- Externalities are always an interesting, well-motivated question to explore: what happens if these groups have different externalities?
+- Could you model information and beliefs about vaccines? What about the network effects of increasing trust in vacccines?
+
+
+Comments from meeting with Mohammad on 4/22:
+- For risk-averse agents: does something more interesting happening than simply that rationing decreases? Does something happen beyond just less rationing? It could just be a threshold -- with concavity, a tiny bit might push you into a corner solution.
+- A divisible good could be interesting, but may not be tractable.
+- Another interesting idea is when investment before the mechanism is optimal. Perhaps rationing leads to missed or wasted investment.
+- Strong suggestion to start with simulations from the code. Try it out with slight concavity.
+
+Comments from meeting with Paul on 5/4:
+- Paul encouraged me to try a divisible item, even if it seemed (and Mohammad advised that it might be) intractable. Believe in yourself! Paul's first work, and Susan Athey's work under Paul, were both motivated by questions that their advisors felt they wouldn't be able to answer!
+- Understand Budish's metric of ex-post unfairness: random serial dictatorship is not always bad. Indeed, if there is only one good, it's in some way the only way to go. Budish's innovation is to bound unfairness when repeated by one good.
+
+Comments from meeting with Matt on 5/5:
+(2) Thesis Discussion
+- I've settled on a concrete idea. Mohammad's "Redistribution through Markets" (Dworczak 2020) paper considers agents with different marginal utilities for wealth, and determines optimal mechanisms in this situation. Some of these mechanisms involve rationing. However, agents' utilities are linear, hence the paper does not consider how agents' risk-aversions might affect the optimal mechanism. Indeed, if poorer individuals have low tolerance for uncertainty, the optimal mechanism may be very different than that derived in the original paper. A concrete extension is to attempt to derive optimal mechanisms when agents' preferences are risk-averse (slightly concave) and see when these mechanisms still involve rationing.
+- A few notes I clarified during the meeting: one example of a time when this decision comes into play is when, say, sellers have lower incomes than buyers, and so a price floor is typically imposed. (This is how Iran's kidney market operates, for example). With risk-averse preferences, you may not see this same price floor being an optimal mechanism. A second point of clarification: in the current model, agents have differing marginal utilities, but their utility functions are then linear in those marginal utilities.
+- I've talked about this with Mohammad, who suggested I begin with simulations of various mechanisms in an environment where agents have concave preferences. He even sent me over some of his existing simulation code! I think this is a great starting point.
+- We also talked about advisors; Matt suggested Mohammad as the best possible advisor (which stands to reason). He suggested that if Mohammad couldn't advise, one of the other theorists in the department, like Paul or Ilya, would probably be more equipped to advise this thesis than Matt. It's allso lovely to have a group of people who I continue talking to about the thesis.
+- Some ideas we discussed:
+	- I can reframe this more broadly as "why is the uncertainty associated with rationing undesirable?" These arguments might also find some inspiration in early economic philosophers (Adam Smith, perhaps Hayek too). In general, the arbitrariness of inequality imposed within a group by rationing feels undesirable. Maybe there's some interesting "veil of ignorance" type arguments here.
+	- One example is healthcare queueing costs -- the uncertainty of not knowing whether you'll be waiting one month or ten months for a surgery can be very harmful.
+	- Another example of where ex-post fairness matters: in Eric Budish's paper on combinatorial allocations, one allocation that is ex-ante fair is a random serial dictatorship. It is definitely not ex-post fair. This is not what most of us would consider optimal!
+- A few ideas that I had afterwards:
+	- I can sharpen a concrete counterexample of when the mechanism from Dworczak (2020) produces an ex-ante optimal mechanism, but seems unpalatable to observers because of wide ex-post inequalities that it imposes.
+	- Another idea: one reason this idea attracted me is that poor agents might be more likely to actually be risk averse (less cash liquidity, tolerance for income shocks, etc.). What if this is reflected in poorer agents having more risk-averse preferences?)
