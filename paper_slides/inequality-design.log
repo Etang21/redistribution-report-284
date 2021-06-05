@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  5 JUN 2021 10:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  5 JUN 2021 16:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -336,35 +336,40 @@ Package grfext Info: Graphics extension search list:
  (/usr/local/texlive/2019/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 58.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 57.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 58.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 57.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 58.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 57.
  [1
 
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
 Underfull \vbox (badness 2261) has occurred while \output is active []
 
- [3] [4] [5] [6]
-LaTeX Font Info:    Try loading font information for U+bbm on input line 167.
+ [3] [4] [5]
+LaTeX Font Info:    Try loading font information for U+bbm on input line 164.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 )
-Overfull \hbox (35.62923pt too wide) detected at line 174
+Overfull \hbox (19.35555pt too wide) detected at line 165
+\OML/cmm/m/it/10.95 ^^\\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 R; Q; F; k; p[]\OT1/cmr/m/n/10.95 ) = [][] \U/bbm/m/n/10.95 1\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 w\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 p[] \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 R \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 p[]Q\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^U \OML/cmm/m/it/10.95 w\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 R \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 p[]Q\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 ) + \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 ]\OML/cmm/m/it/10.95 dF\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 v[]; v[]\OT1/cmr/m/n/10.95 )
+ []
+
+[6]
+Overfull \hbox (35.62923pt too wide) detected at line 173
 [][] [][] \U/bbm/m/n/10.95 1\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 w\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 p[] \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 R \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 p[]Q\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^U \OML/cmm/m/it/10.95 w\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 R \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 p[]Q\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 ) + \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 ]\OML/cmm/m/it/10.95 w\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 p[] \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 R \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 p[]Q\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 dF\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 v[]; v[]\OT1/cmr/m/n/10.95 )
  []
 
 
-Overfull \hbox (45.72095pt too wide) detected at line 180
+Overfull \hbox (45.72095pt too wide) detected at line 179
 [][] [][] \U/bbm/m/n/10.95 1\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 w\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 R \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 p[]Q\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^U \OML/cmm/m/it/10.95 w\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 R \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 p[]Q\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 ) + \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 ](\OML/cmm/m/it/10.95 v[] \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 w\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 R \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 p[]Q\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 ))\OML/cmm/m/it/10.95 dF\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 v[]; v[]\OT1/cmr/m/n/10.95 )
  []
 
 
-Overfull \hbox (15.25479pt too wide) detected at line 186
+Overfull \hbox (15.25479pt too wide) detected at line 185
 [] [][] \U/bbm/m/n/10.95 1\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 w\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 R \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 p[]Q\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^T \OML/cmm/m/it/10.95 w\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 R \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 p[]Q\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 ) + \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 ](\OML/cmm/m/it/10.95 v[] \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 w\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 R \OMS/cmsy/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 p[]Q\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 v[]\OT1/cmr/m/n/10.95 ))\OML/cmm/m/it/10.95 dF\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 v[]; v[]\OT1/cmr/m/n/10.95 )
  []
 
@@ -379,53 +384,57 @@ Overfull \hbox (83.4371pt too wide) in alignment at lines 195--196
  []
 
 
-Underfull \vbox (badness 1067) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7]
-<figures/k-vs-prices-inequality-low.png, id=152, 1429.34pt x 715.67375pt>
+Underfull \hbox (badness 10000) in paragraph at lines 209--209
+[][][]\OT1/cmr/m/n/8 The full code for our nu-mer-i-cal sim-u-la-tions can be found at
+ []
+
+[8]
+<figures/k-vs-prices-inequality-low.png, id=162, 1429.34pt x 715.67375pt>
 File: figures/k-vs-prices-inequality-low.png Graphic file (type png)
 <use figures/k-vs-prices-inequality-low.png>
-Package pdftex.def Info: figures/k-vs-prices-inequality-low.png  used on input line 215.
+Package pdftex.def Info: figures/k-vs-prices-inequality-low.png  used on input line 216.
 (pdftex.def)             Requested size: 385.53484pt x 193.03792pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<figures/k-vs-prices-inequality-high.png, id=155, 1426.32875pt x 719.68875pt>
+<figures/k-vs-prices-inequality-high.png, id=165, 1426.32875pt x 719.68875pt>
 File: figures/k-vs-prices-inequality-high.png Graphic file (type png)
 <use figures/k-vs-prices-inequality-high.png>
-Package pdftex.def Info: figures/k-vs-prices-inequality-high.png  used on input line 223.
+Package pdftex.def Info: figures/k-vs-prices-inequality-high.png  used on input line 224.
 (pdftex.def)             Requested size: 385.53484pt x 194.5272pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+[9 </Users/etang/stanford-classes/honors-thesis/redistribution-report-284/paper_slides/figures/k-vs-prices-inequality-low.png>]
+Overfull \hbox (1.22139pt too wide) in paragraph at lines 244--245
+\OML/cmm/m/it/10.95 F$\OT1/cmr/m/it/10.95 . Con-sider the fam-ily of util-ity func-tions parametrized by $\OML/cmm/m/it/10.95 k$\OT1/cmr/m/it/10.95 , with $\OML/cmm/m/it/10.95 w\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x[]\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/10.95 v[]; k\OT1/cmr/m/n/10.95 ) =
+ []
 
-Underfull \vbox (badness 4872) has occurred while \output is active []
-
- [8] [9 </Users/etang/stanford-classes/honors-thesis/redistribution-report-284/paper_slides/figures/k-vs-prices-inequality-low.png>] [10 </Users/etang/stanford-classes/honors-thesis/redistribution-report-284/paper_slides/figures/k-vs-prices-inequality-high.png>] (/Users/etang/stanford-classes/honors-thesis/redistribution-report-284/paper_slides/inequality-design.bbl [11])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 290.
+[10 </Users/etang/stanford-classes/honors-thesis/redistribution-report-284/paper_slides/figures/k-vs-prices-inequality-high.png>] [11] (/Users/etang/stanford-classes/honors-thesis/redistribution-report-284/paper_slides/inequality-design.bbl)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 285.
  [12]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 290.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 285.
  (/Users/etang/stanford-classes/honors-thesis/redistribution-report-284/paper_slides/inequality-design.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 290.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 290.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 285.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 285.
 Package rerunfilecheck Info: File `inequality-design.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 290.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 285.
  ) 
 Here is how much of TeX's memory you used:
- 6669 strings out of 492616
- 99238 string characters out of 6129482
- 200861 words of memory out of 5000000
- 10473 multiletter control sequences out of 15000+600000
+ 6674 strings out of 492616
+ 99314 string characters out of 6129482
+ 201898 words of memory out of 5000000
+ 10476 multiletter control sequences out of 15000+600000
  10968 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,16n,25p,1173b,425s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,16n,27p,1172b,403s stack positions out of 5000i,500n,10000p,200000b,80000s
  </Users/etang/Library/texlive/2019/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb>
-Output written on /Users/etang/stanford-classes/honors-thesis/redistribution-report-284/paper_slides/inequality-design.pdf (12 pages, 450535 bytes).
+Output written on /Users/etang/stanford-classes/honors-thesis/redistribution-report-284/paper_slides/inequality-design.pdf (12 pages, 454845 bytes).
 PDF statistics:
- 266 PDF objects out of 1000 (max. 8388607)
- 229 compressed objects within 3 object streams
- 49 named destinations out of 1000 (max. 500000)
+ 274 PDF objects out of 1000 (max. 8388607)
+ 237 compressed objects within 3 object streams
+ 51 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

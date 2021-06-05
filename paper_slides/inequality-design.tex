@@ -38,20 +38,19 @@
 
 \begin{document}
 
-\title{Inequality and Ex-Post Fairness in Rationing Mechanisms}
-\shortTitle{(Exploration of Open Questions)}
+\title{Redistributive Mechanisms under Risk Aversion}
 \author{Eric Tang\thanks{%
-Thanks to Mohammad Akbarpour, Matthew Gentzkow and Paul Milgrom for thoughtful discussions on and support for these ideas.}}
+Thanks to Mohammad Akbarpour, Matthew Gentzkow and Paul Milgrom for thoughtful discussions on these ideas and consistent support.}}
 \date{\today}
-\pubMonth{Month}
-\pubYear{Year}
-\pubVolume{Vol}
-\pubIssue{Issue}
+\pubMonth{Jun}
+\pubYear{2021}
+\pubVolume{}
+\pubIssue{}
 \JEL{}
 \Keywords{}
 
 \begin{abstract}
-    Choices of optimal market mechanisms are often made with inequality in mind. When agents have differing marginal utilities for money, the socially optimal mechanism may involve rationing agents out of the market. However, less work has studied the optimality of rationing in settings with risk-aversion or wealth effects, such as labor markets. In this work, we analyze the optimal single-price mechanism on the seller side of a market for an indivisible good. We generalize the welfare maximization problem to the setting when agents have arbitrary preferences for money, and analyze optimal prices for several distributions using numerical simulation. In our simulation results, we find that when agents have concave preferences for money, rationing may still be optimal, but the welfare-maximizing price lies closer to the competitive price.
+    The intent to address inequality can often alter a market designer's choice of optimal mechanism. When agents have differing marginal utilities for money, the socially optimal mechanism may involve rationing agents out of the market, as in \cite{dworczak-2020}. However, less work has studied the optimality of rationing in settings with risk-aversion or wealth effects, such as labor markets. In this work, we analyze the optimal single-price mechanism on the seller side of a market for an indivisible good. We generalize the welfare maximization problem to the setting where agents have arbitrary preferences for money, and analyze optimal prices for several distributions using numerical simulation. In our simulation results, we find that when agents have concave preferences for money, rationing may still be optimal. However, the welfare-maximizing price lies closer to the competitive price than it does under linear preferences.
 \end{abstract}
 
 \maketitle
@@ -63,9 +62,9 @@ Thanks to Mohammad Akbarpour, Matthew Gentzkow and Paul Milgrom for thoughtful d
 Recent years have seen a proliferation of work on market design in settings with inequality, motivated by applications from rent control (\cite{diamond-2019}) to markets for kidney exchange \cite{dworczak-2020}. In many of these settings, agents have varying marginal utilities for goods, or a market designer assigns different weights to the utility of each agent. Among others, this work includes that of fair allocation (\cite{babaioff-2019}), combinatorial assignment (\cite{budish-2011}) and market-based redistribution (\cite{akbarpour-2020}).
 % TODO: Could improve this paragraph a bit more
 
-We focus on a setting in which a market designer is allocating a good to buyers with differing, but unknown, marginal utilities for the good and for money. Intuitively, this may correspond to agents with lower wealth valuing money more highly, and the market designer wishing to prioritize this. \cite{dworczak-2020} model this market with both buyers and sellers, where agents have linear utilities for both the good and for money. In cases of significant same-side inequality, they find that the optimal mechanism is a rationing mechanism, where the price set is higher than the competitive price, and agents who wish to trade can do so only with a certain probability. As the authors point out, this randomization can in practice be harmful to poorer individuals, who may have less tolerance for uncertainty. This raises several possible approaches for addressing these harms in practice.
+We focus on a setting in which a market designer is allocating a good and money to agents with differing, but unknown, marginal utilities for the good and for money. Intuitively, this may correspond to agents with lower wealth valuing money more highly, and the market designer wishing to prioritize this. \cite{dworczak-2020} model this market with both buyers and sellers, where agents have linear utilities for both the good and for money. In cases of significant same-side inequality, they find that the optimal mechanism is a rationing mechanism, where the price set is higher than the competitive price, and agents who wish to trade can do so only with a certain probability. As the authors point out, this randomization can in practice be harmful to poorer individuals, who may have less tolerance for uncertainty. This raises several possible approaches for addressing these harms in practice.
 
-In our work, we extend the analysis of the seller-side market in \cite{dworczak-2020} to consider agents with risk-averse preferences, extending the original work's assumptions on the linear utility functions of agents. To extend this to risk-averse settings, we parametrize agents' utility functions for money as one of a family of concave functions. Focusing on single-price mechanisms, we then use numerical simulation to determine the welfare-maximizing price and competitive price in several settings. We find settings in which rationing remains optimal despite slight concavity in agent preferences. However, as our later explanation suggests and our numerical simulations show, the competitive price becomes welfare-maximizing when agent are sufficiently concave.
+In our work, we extend the analysis of the seller-side market in \cite{dworczak-2020} to consider agents with risk-averse preferences, extending the original work's assumptions on the linear utility functions of agents. To extend this to risk-averse settings, we parametrize agents' utility functions for money as one of a family of concave functions. Focusing on single-price mechanisms, we then use numerical simulation to determine the welfare-maximizing price and competitive price in several settings. We find settings in which rationing remains optimal despite slight concavity in agent preferences. However, as our later explanation suggests and our numerical simulations show, the competitive price becomes welfare-maximizing when agents are sufficiently concave.
 
 This work offers guidance about which analytical results we might prove in seller markets with inequality. In our case, we suggest two conjectures based on our numerical simulation results, which stiuplate when rationing can be optimal in a setting with concave preferences. This work is also a first step towards extending the results for concave preferences to a wider array of settings, such as full two-sided markets and markets with a divisible good. Finally, we hope that these results provide guidance on how to implement rationing mechanisms in the real world, where agents may have meaningful income effects or otherwise complex preferences.
 
@@ -86,11 +85,11 @@ Weitzman then considers two possible rules for allocating a fixed quantity of th
 
 % TODO: Cite Condorelli?
 
-\cite{dworczak-2020} extend \cite{weitzman-1977} by considering a two-sided market and all possible allocation mechanisms. In their setting, buyers and sellers are seeking to buy an indivisible good. They frame the Pareto frontier as determining the welfare-maximizing solution when agents have different valuations for money and for the good. When there is significant inequality between buyers and sellers, optimal mechanisms take the form of a ``tax", which charges buyers a higher price than sellers, then transfers the surplus to the poorer side of the market. When inequality is high among sellers, in a sense which they make precise, the optimal mechanism may involve rationing: setting a price higher than the competitive price for sellers. We say that sellers who are able to sell are rationed into the market, while sellers who wish to sell but cannot are rationed out of the market. When there is significant inequality between agents on one side of the market, price controls take a more complex form, but rationing may still be optimal.
+\cite{dworczak-2020} extend \cite{weitzman-1977} by considering a two-sided market and all possible allocation mechanisms. In their setting, buyers and sellers are seeking to buy an indivisible good. They determine the welfare-maximizing mechanism when agents have different valuations for money and for the good. When there is significant inequality between buyers and sellers, optimal mechanisms take the form of a ``tax", which charges buyers a higher price than sellers, then transfers the surplus to the poorer side of the market. When inequality is high among sellers, in a sense which they make precise, the optimal mechanism may involve rationing: setting a price higher than the competitive price for sellers. We say that sellers who are able to sell are rationed into the market, while sellers who wish to sell but cannot are rationed out of the market. When there is significant inequality between agents on one side of the market, price controls take a more complex form, but rationing may still be optimal.
 
-Along the way, \cite{dworczak-2020} show that the model where agents have differing marginal values for money is equivalent to a market designer placing different Pareto weights on agents. Intuitively, an agent having a higher marginal utility for money is akin to a market designer placing greater weight on the money they are given in the final allocation. 
+Along the way, \cite{dworczak-2020} show that the model where agents have differing marginal values for money is equivalent to a market designer placing different Pareto weights on the utility o different agents. Intuitively, an agent having a higher marginal utility for money is akin to a market designer placing greater weight on the money they are given in the final allocation. 
 
-The key obstacle which \cite{dworczak-2020} overcomes, as was faced by \cite{weitzman-1977}, is that the market designer cannot perfectly identify agents' needs, hence setting a price at which the commodity is rationed helps to identify these needs. The intuition of their result on the seller side, which we use in our work, is that a willingness to sell on the seller side identifies sellers with a higher marginal value for money in expectation. Unlike our work, \cite{dworczak-2020} are able to fully characterize agents' behavior by their rate of substitution between the good and money. We extend this characterization to our setting with more general preferences. Finally, their work discusses applications in the Iranian kidney exchange market, which is an example of same-side inequality among sellers, and the housing rental market, which is typically an example of cross-side inequality.
+The key obstacle which \cite{dworczak-2020} overcome, as was faced by \cite{weitzman-1977}, is that the market designer cannot perfectly identify agents' needs, hence setting a price at which the commodity is rationed helps to identify these needs. The intuition of their result on the seller side is that a willingness to sell on the seller side identifies sellers with a higher marginal value for money in expectation. Unlike our work, \cite{dworczak-2020} are able to fully characterize agents' behavior by their rate of substitution between the good and money. We extend this characterization to our setting with more general preferences. Their work also discusses applications in the Iranian kidney exchange market, which is an example of same-side inequality among sellers, and the housing rental market, which is typically an example of cross-side inequality.
 
 Finally, \cite{akbarpour-2020} approach the problem slightly differently, as one in which a market designer is alllocating a public good of heterogeneous quality to buyers, and additionally determining the price. Also notable about the \cite{akbarpour-2020} model is that it weights the valuation of generating revenue with its own Pareto weight, reflecting the potential uses of that generated revenue. The work also introduces observable types which the market designer can condition on: one can think of these as observable demographics which are partially informative about a buyer's need or their marginal utility for money. Both of these model features represent possible extensions to our work: one could determine optimal mechanisms in concave-preference settings with a Pareto weight on revenue, or with other observable type information about agents.
 
@@ -99,14 +98,14 @@ Finally, \cite{akbarpour-2020} approach the problem slightly differently, as one
 
 To motivate our model's extension of the work in \cite{dworczak-2020}, we offer a motivating labor market example, where agents may be quite risk-averse about the income they receive. Consider a group of taxi drivers (sellers) queued up and hoping to sell rides to a set of passengers (buyers). Sellers in this case may be risk-averse, as they may prefer a guaranteed income (a transfer) to an uncertain probability of a higher reward (being rationed into the market). Thus with risk-averse preferences for money, we might expect that the optimal mechanism is more likely to utilize a competitive price accompanied by lump-sum transfers, instead of utilizing rationing.
 
-As rationing is generically used on the seller side more often, we may naturally be more concerned with risk-averse preferences for sellers. As in the case of sellers entering a market to earn their income, this suggests that we should first concern ourselves with agents' risk-averse preferences for money. For example, a taxi driver may be less risk-averse with respect to the time it takes to accept a ride, but more risk-averse with regards to the income they accumulate in a given day.
+As rationing is generically used on the seller side more often, we may naturally be more concerned with risk-averse preferences for sellers. As in the case of sellers entering a market to earn their income, this suggests that we should first concern ourselves with agents' risk-averse preferences for money.
 
 \section{Model}
 \label{sec:model}
 
 % TODO: Maybe (?) add definition of inequality here.
 
-In our modeling framework, we preserve much of the notation from \cite{dworczak-2020}. We continue to consider an indivisible good denoted by $K$, divisible money denoted by $M$, and a unit mass of prospective sellers. In our model, the market designer has obtained revenue $R$ from the buyer-side of the market and must procure quantity $Q$ of the good from the seller side of the market.
+In our modeling framework, we maintain much of the notation from \cite{dworczak-2020}. We consider an indivisible good denoted by $K$, divisible money denoted by $M$, and a unit mass of prospective sellers. In our model, the market designer has obtained revenue $R$ from the buyer-side of the market and must procure quantity $Q$ of the good from the seller side of the market.
 
 Agents' marginal values for the good and money are given by $v^K$ and $v^M$, respectively. We let $F(v^K, v^M)$ denote the joint distribution of these marginal values over all sellers. We let $\underline{v}^K$ and $\underline{v}^M$ denote the lower bounds of $v^K$ and $v^M$ in this distribution, and we let $\overline{v}^K$ and $\overline{v}^M$ denote the corresponding upper bounds. We let $x^K$ and $x^M$ denote the quantity of the good and money, respectively, which agents receive. Finally, $p_S$ dentes the single price on the seller side which the market designer sets.
 
@@ -157,17 +156,17 @@ Compared to the case of linear utilities, in this risk-averse scenario, we may f
 
 \subsection{Maximization Problem}
 
-The next complication is that since utility in money is non-linear, we can no longer solely characterize agents' utilities using their marginal rate of substitution between the good and money.
+The next complication is that since utility in money is non-linear, we can no longer solely characterize agents' utilities using their marginal rate of substitution between the good and money. Furthermore, \cite{dworczak-2020} use this characterization to separate the objective maximization into two components: the expected utility from sale transactions, and the expected additional utility from any lump sum to the sellers. However, since our preferences for money are now non-linear, we must now separate our objective maximization into three terms, corresponding to three categories of sellers: those who  wish to sell and do sell, those who wish to sell but cannot sell, and those who do not wish to sell.
 
-Second, the original work of \cite{dworczak-2020} separates the objective maximization into two components: the expected change in utility from transactions for sellers who are able to sell their good, and the expected additional utility from any lump sum to the sellers. However, since our preferences for money are now non-linear, we must now separate our objective maximization into components based on which agents are receiving each transfer. Concretely, we have three categories of sellers: those who are willing to sell and do sell, those who are willing to sell but cannot sell, and those who do not wish to sell.
-
-First, to determine the relative proportion of each group of sellers, we must determine the quantity of sellers who are willing to sell at a price $p_S$. As utilities are non-linear, sellers' decision to trade also depends on the amount of the lump-sum payment $R - p_S Q$. We denote this quantity of sellers by $\tau$. This quantity is then
+First, to determine the relative proportion of each group of sellers, we must determine the quantity of sellers who are willing to sell at a price $p_S$. As utilities are non-linear, sellers' decision to trade also depends on the amount of the lump-sum payment $R - p_S Q$. We denote this quantity of sellers by $\tau$, typically omitting function arguments for brevity. This quantity is then
 
 $$
-\tau = \int_{\underline{v}^K, \underline{v}^M}^{\overline{v}^K, \overline{v}^M} \mathbbm{1}[w(p_S + R - p_SQ; v^M) \ge w(R - p_S Q ; v^M) + v^K] dF(v^K, v^M)
+\tau(R, Q, F, k, p_S) = \int_{\underline{v}^K, \underline{v}^M}^{\overline{v}^K, \overline{v}^M} \mathbbm{1}[w(p_S + R - p_SQ; v^M) \ge w(R - p_S Q ; v^M) + v^K] dF(v^K, v^M)
 $$
 
-For sellers who are able to sell their good, these agents have none of the good, receive the price $p_S$, and further receive a lump-sum transfer of $R - p_S Q$. Thus the contribution of these sellers is
+We then let $p_S^c(R, Q, F, k)$ denote the competitive price, at which the number of sellers who wish to sell exactly matches the desired quantity. Because $\tau$ is increasing in $p_S$, the competitive price is exactly defined by $\tau(R, Q, F, k, p_S^c) = Q$.
+
+We now proceed to consider the welfare of each agent. Sellers who wish to sell are rationed into the market have none of the good, receive the price $p_S$, and further receive a lump-sum transfer of $R - p_S Q$. Thus the contribution of these sellers is
 
 \begin{equation}
     \frac{Q}{\tau} \int_{\underline{v}^K, \underline{v}^M}^{\overline{v}^K, \overline{v}^M} \mathbbm{1}[w(p_S + R - p_SQ; v^M) \ge w(R - p_S Q ; v^M) + v^K] w(p_S + R - p_SQ; v^M) dF(v^K, v^M)
@@ -179,7 +178,7 @@ On the other hand, sellers who wish to sell their good but are rationed out of t
     \frac{\tau - Q}{\tau} \int_{\underline{v}^K, \underline{v}^M}^{\overline{v}^K, \overline{v}^M} \mathbbm{1}[w(R - p_SQ; v^M) \ge w(R - p_S Q ; v^M) + v^K] (v^K + w(R - p_SQ; v^M)) dF(v^K, v^M)
 \end{equation}
 
-Finally, sellers who do not wish to sell receive only the good and the lump sum transfer as well, making the contribution of a unit of these sellers
+Finally, sellers who do not wish to sell also receive only the good and the lump sum transfer, making the contribution of a unit of these sellers
 
 \begin{equation}
     \int_{\underline{v}^K, \underline{v}^M}^{\overline{v}^K, \overline{v}^M} \mathbbm{1}[w(R - p_SQ; v^M) \le w(R - p_S Q ; v^M) + v^K] (v^K + w(R - p_SQ; v^M)) dF(v^K, v^M)
@@ -189,26 +188,28 @@ Thus our complete maximization objective is
 
 \begin{equation}
     \begin{split}
-        & \frac{Q}{\tau} \int_{\underline{v}^K, \underline{v}^M}^{\overline{v}^K, \overline{v}^M} \mathbbm{1}[w(p_S + R - p_SQ; v^M) \ge w(R - p_S Q ; v^M) + v^K] w(p_S + R - p_SQ; v^M) dF(v^K, v^M) \\
+        & U(R, Q, F, k, p_S) \\
+        & = \frac{Q}{\tau} \int_{\underline{v}^K, \underline{v}^M}^{\overline{v}^K, \overline{v}^M} \mathbbm{1}[w(p_S + R - p_SQ; v^M) \ge w(R - p_S Q ; v^M) + v^K] w(p_S + R - p_SQ; v^M) dF(v^K, v^M) \\
         & + \frac{\tau - Q}{\tau} \int_{\underline{v}^K, \underline{v}^M}^{\overline{v}^K, \overline{v}^M} \mathbbm{1}[w(R - p_SQ; v^M) \ge w(R - p_S Q ; v^M) + v^K] (v^K + w(R - p_SQ; v^M)) dF(v^K, v^M) \\
-        & + \int_{\underline{v}^K, \underline{v}^M}^{\overline{v}^K, \overline{v}^M} \mathbbm{1}[w(R - p_SQ; v^M) \le w(R - p_S Q ; v^M) + v^K] (v^K + w(R - p_SQ; v^M)) dF(v^K, v^M)
+        & + \int_{\underline{v}^K, \underline{v}^M}^{\overline{v}^K, \overline{v}^M} \mathbbm{1}[w(R - p_SQ; v^M) \le w(R - p_S Q ; v^M) + v^K] (v^K + w(R - p_SQ; v^M)) dF(v^K, v^M).
     \end{split}
 \end{equation}
 
-For a fixed revenue $R$, quantity $Q$, and valuation distribution $F$, we aim to select the $p_S$ which maximizes this welfare objective.
+We then let $p_S^o(R, Q, F, k) = \arg \max_{p_S} U(R, Q, F, k, p_S)$ denote the choice of $p_S$ which maximizes this welfare objective.
 
 \section{Results: Numerical Analysis}
 \label{sec:results-numerical-analysis}
 
-We are particularly interested in how the gap between the competitive price and welfare-maximizing price changes as agents' preferences become more risk-averse. In our setting, this means analyzing how these two prices change as $k$ moves from $1$ (perfectly linear, non-risk-averse preferences) towards $0$ (more concave preferences).
+We are particularly interested in how the difference between the optimal price and competitive price changes as agents' preferences become more risk-averse. In our setting, this means analyzing how $p_S^o(R, Q, F, k)$ and $p_S^c(R, Q, F, k)$ change as $k$ moves from $1$ (perfectly linear, non-risk-averse preferences) to $0$ (more concave preferences).
 
-% TODO: Tag the intuition section with a label to cite here.
-Based on our intuition described above, we expect that in settings where the competitive price is optimal with linear utilities for money, the competitive price should still be optimal when agents have risk-averse preferences. Second, we expect that in settings where rationing is optimal with linear utilities for money, the optimal price should shift closer to the competitive price as agents' preferences become more concave. In these settings, the question most of interest to us is whether our results are robust to the introduction of slight concavity. That is, for values of $k$ near $1$, it may be that the competitive price is always optimal. Such a result would substantially weaken the theoretical case for the use of price controls and rationing on the seller side, even in cases of high inequality.
+Based on our intuition in section \ref{sec:economic-intuition}, we expect that when the competitive price is optimal with linear utililties, the competitive price remains optimal for concave preferences. Formally, for settings in which $p_S^o(R, Q, F, 1) = p_S^c(R, Q, F, 1)$, we expect that $p_S^o(R, Q, F, k) = p_S^c(R, Q, F, k)$ for $k < 1$ as well. Furthermore, we expect that the difference between the optimal price and competitive price should decline as preferences become more concave. Formally, when $p_S^o(R, Q, F, 1) > p_S^c(R, Q, F, 1)$, we expect to see $p_S^o(R, Q, F, k) - p_S^c(R, Q, F, k) < p_S^o(R, Q, F, 1) - p_S^c(R, Q, F, 1)$ for $k < 1$. 
 
-Thankfully for the earlier literature, our numerical simulation results suggest that rationing can still be optimal even in settings with concave preferences.\footnote{Code for our numerical simulations can be found at https://github.com/Etang21/redistribution-report-284.}
+A critical question for applications, which our intuition does not answer, is whether rationing is robust to the introduction of slight concavity. That is, for $k < 1$, are there any settings in which $p_S^o(R, Q, F, k) > p_S^c(R, Q, F, k)$? A negative answer to this question would imply that for any setting with even slightly concave preferences, rationing is never optimal. Such a result would substantially weaken the theoretical case for the use of price controls on the seller side, even in cases of high inequality.
+
+It may come as a relief, therefore, that our numerical simulation results suggest rationing may still be optimal even in settings with concave preferences.\footnote{The full code for our numerical simulations can be found at https://github.com/Etang21/redistribution-report-284.} Figure \ref{k-vs-prices-inequality-low} displays a setting in which inequality is low, in the sense of \cite{dworczak-2020}. In this setting, when agents' utilities for wealth are linear, the welfare-maximizing price is the competitive price. Figure \ref{k-vs-prices-inequality-low} shows that the welfare-maximizing and competitive prices still coincide when agents have risk-averse preferences.
 
 % TODO: Update the following citation to refer to an equation which you define above.
-Figure \ref{k-vs-prices-inequality-low} displays a setting in which inequality is low, in the sense of \cite{dworczak-2020}. In this setting, when agents' utilities for wealth are linear, the welfare-maximizing price is the competitive price. Figure \ref{k-vs-prices-inequality-low} shows that the welfare-maximizing and competitive prices still coincide when agents have risk-averse preferences.
+
 
 \begin{figure}
     \label{k-vs-prices-inequality-low}
@@ -229,23 +230,18 @@ In both cases, we have only investigated two possible settings for the optimizat
 \section{Conjectures}
 \label{sec:conjectures}
 
-Our work in the above sections suggest two corresponding analytic conjectures. First, our economic intuition in \ref{sec:economic-intuition} and our numerical simulations as in \ref{k-vs-prices-inequality-low} suggest that when the competitive price is optimal for the linear utility setting, it is also optimal in the concave-preference settings. Formally,
+Our work in the above sections suggest two corresponding analytic conjectures. First, our economic intuition in \ref{sec:economic-intuition} and our numerical simulations as in \ref{k-vs-prices-inequality-low} suggest that when the competitive price is optimal for the linear utility setting, it is also optimal in the concave-preference settings. Formally,\footnote{Note our slight abuse of notation in using $p_S^o(R, Q, F, w)$ to refer to the optimal price for utility function $w$ and using $p_S^o(R, Q, F, k)$ to refer to the optimal price when the utility function $w$ is parametrized by $k$.}
 
-% Maybe: move these figures to sideways figures in appendix?
 \begin{conj}
     \label{conj:competitive-price}
-    % Add a segment on fixing R, Q, etc.?
-    Suppose that when agent preferences for money are given by $w(x^M; v^M) = x^M v^M$, the optimal price is equal to the competitive price, so $p_S = p_S^C$. Holding all other parameters fixed, if we set agent preferences for money to any $w$ with $w$ concave, increasing in $v^M$ and satisfying $v'(0) = v^M$, then $p_S = p_S^C$ in the new setting.
+    Fix some revenue $R$, quantity $Q$, and valuation distribution $F$. Suppose that when agent preferences for money are given by $w(x^M; v^M) = x^M v^M$, we have $p_S^o(R, Q, F, w) = p_S^c(R, Q, F, w)$. Consider any agent preferences for money given by $\tilde{w}(x^M; v^M)$ with $\tilde{w}$ concave, increasing in $v^M$ and satisfying $\tilde{w}'(0) = v^M$. Then $p_S^o(R, Q, F, \tilde{w}) = p_S^c(R, Q, F, \tilde{w})$.
 \end{conj}
-
-We suspect that Conjecture \ref{conj:competitive-price} can be solved by comparing the increased utility from higher lump-sum transfers to the decreased utility for higher sale prices of agents rationed in.
 
 Our second conjecture corresponds to the numerical simulation result in \ref{k-vs-prices-inequality-high}.
 
 \begin{conj}
     \label{conj:rationing-robust}
-    % Add a segment on fixing R, Q, etc.?
-    Consider the family of utility functions parametrized by $k$, with $w(x^M; v^M, k) = \frac{1}{k}(x^M v^M + 1)^k$. Suppose that when agent preferences for money are given by $w(x^M; v^M) = x^M v^M + 1$, the optimal mechanism involves rationing, so $p_S > p_S^C$. Then there exists some $\epsilon > 0$ such that for all $k \in (1-\epsilon, 1]$, rationing is optimal in the risk-averse setting with agent preferences for money given by $w(x^M; v^M, k)$.
+    Fix some revenue $R$, quantity $Q$, and valuation distribution $F$. Consider the family of utility functions parametrized by $k$, with $w(x^M; v^M, k) = \frac{1}{k}(x^M v^M + 1)^k$. Suppose that $p_S^o(R, Q, F, 1) > p_S^c(R, Q, F, 1)$. Then there exists some $\varepsilon > 0$ such that $k \in (1-\varepsilon, 1]$ implies $p_S^o(R, Q, F, k) > p_S^c(R, Q, F, k)$. 
 \end{conj}
 
 If true, this conjecture would suggest that the use of rationing as found in \cite{dworczak-2020} is reasonably robust to the presence of risk-aversion among agents. When rationing is optimal for linear preferences, it is also optimal for slightly concave preferences.
@@ -257,11 +253,11 @@ More work is needed in three key directions: exactly characterizing the optimal 
 
 In the setting displayed in Figure \ref{k-vs-prices-inequality-high}, the welfare-maximizing price approaches the competitive price as preferences become more concave. However, more work is needed to verify exactly what the welfare-maximizing price is for various concave preferences. Alternatively, we could hope to find a threshold $k'$ for a given setting such that when preferences are sufficiently concave ($k < k'$), the competitive price must be optimal.
 
-The second major area of extension is to generalize beyond single-price mechanisms to all possible mechanisms. We have covered only the first analysis of \cite{dworczak-2020}, which considers single-price mechanisms as a preliminary case to general mechanisms. It is possible to imagine that concave preferences lead to more complex optimal mechanisms, even though \cite{dworczak-2020} find that optimal mechanism generally take on a simple form. However, with general concave preferences, analytical approaches become particularly difficult. 
+The second major area of extension is to generalize beyond single-price mechanisms to all possible mechanisms. We have covered only the first step in the analysis of \cite{dworczak-2020}, which considers single-price mechanisms as a preliminary case to general mechanisms. It is possible to imagine that concave preferences lead to more complex optimal mechanisms, even though \cite{dworczak-2020} find that optimal mechanisms generally take on a simple form. However, with general concave preferences, analytical approaches become particularly difficult. 
 
-Finally, it remains to extend this work to a two-sided market, and solve joint optimality in the market. We have analyzed only the seller-side of the market, in which poorer sellers are those more likely to want to sell. In the buyer side, willingness to buy identifies the opposite, identifying buyers with a higher value for money. This could lead to qualitatively different behavior.
+Finally, it remains to extend this work to a two-sided market, and solve for joint optimality in the market. We have analyzed only the seller-side of the market, in which poorer sellers are those more likely to want to sell. In the buyer side, willingness to buy identifies the opposite, identifying buyers with a higher value for money. This could lead to qualitatively different behavior.
 
-There are also more open-ended extensions that would help determine acionable strategies in real world markets. Taking \cite{akbarpour-2020} as a departure point, what if one incorporates externalities of the good's distribution into our optimization? It seems that many public provisioning systems are also partially motivated by positive externalities. One motivating question here is the distribution of vaccines, but one could imagine similar positive externalities in public provision of housing and education, with Zi Yang's work as a starting point. % TODO: Cite this
+There are also more open-ended extensions that would help determine acionable strategies in real world markets. Taking \cite{akbarpour-2020} as a departure point, one could incorporates externalities of the good's distribution into our optimization problem. Many public provisioning systems are also partially motivated by positive externalities, such as vaccine distribution, public housing, and public education, examples relevant to the work of \cite{kang-2020}.
 
 % Perhaps: note that there are also other possible extensions, such as the use of a divisible good.
 
@@ -276,10 +272,9 @@ There are also more open-ended extensions that would help determine acionable st
 
 In this work, we analyzed the optimal single-price mechanism for maximizing total welfare in a setting where agents may have different marginal utilities for a good, and differing concave preferences for money. This setting is particularly relevant when designing price controls for labor markets. For example, when determining an appropriate minimum wage in a labor market, we should be concerned about wealth effects and agents' possible risk-aversion.
 
-Our numerical simulation results validate this caustion, while also showing that the use of rationing can be robust to slight concavity in agents' preferences. We generalize the method of \cite{dworczak-2020} to formulate a welfare-maximization problem for general agent preferences for money. We then numerically simulate how the competitive price and welfare-maximizing price change as preferences become more concave.
+Our numerical simulation results validate this caution, while also showing that the use of rationing can be robust to slight concavity in agents' preferences. We generalize the method of \cite{dworczak-2020} to formulate a welfare-maximization problem for general agent preferences for money. We then numerically simulate how the competitive price and welfare-maximizing price change as preferences become more concave. We find that rationing may still be optimal when agents have slightly concave preferences for money. However, the welfare-maximizing price is closer to the competitive price than under linear preferences, and the two become equivalent when preferences are highly concave.
 
-Further work is needed to analytically solve for the optimal price under general preferences, to generalize to all mechanisms (not solely single-price mechanisms) and to extend our findings to a two-sided market. More broadly, the literature on redistribution through market design can benefit from a better understanding of how wealth effects shape optimal redistributive mechanisms. More precisely characterizing such mechanisms should yield implementable designs that are more robust to preferences in the wild.
-
+Further work is needed to analytically solve for the optimal price under general preferences, to generalize optimality to all mechanisms (not solely single-price mechanisms) and to extend our findings to a two-sided market. More broadly, the literature on redistribution through market design can benefit from a better understanding of how wealth effects shape optimal redistributive mechanisms. Precisely characterizing such mechanisms should yield designs that, when implemented, are more robust to preferences in the wild.
 
 % Remove or comment out the next two lines if you are not using bibtex.
 \bibliographystyle{aea}

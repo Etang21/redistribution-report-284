@@ -3,44 +3,44 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: inequality-design.aux
 The style file: aea.bst
 Database file #1: inequality-design.bib
-You've used 7 entries,
+You've used 8 entries,
             2695 wiz_defined-function locations,
-            619 strings with 4871 characters,
-and the built_in function-call counts, 44236 in all, are:
-= -- 7409
-> -- 508
+            623 strings with 4947 characters,
+and the built_in function-call counts, 46921 in all, are:
+= -- 7830
+> -- 542
 < -- 0
-+ -- 3640
-- -- 160
-* -- 3961
-:= -- 8660
-add.period$ -- 49
-call.type$ -- 7
-change.case$ -- 91
-chr.to.int$ -- 7
-cite$ -- 7
-duplicate$ -- 98
-empty$ -- 239
-format.name$ -- 160
-if$ -- 7926
++ -- 3834
+- -- 170
+* -- 4186
+:= -- 9232
+add.period$ -- 56
+call.type$ -- 8
+change.case$ -- 104
+chr.to.int$ -- 8
+cite$ -- 8
+duplicate$ -- 112
+empty$ -- 273
+format.name$ -- 170
+if$ -- 8395
 int.to.chr$ -- 5
 int.to.str$ -- 0
 missing$ -- 0
-newline$ -- 28
-num.names$ -- 77
-pop$ -- 7
+newline$ -- 31
+num.names$ -- 88
+pop$ -- 8
 preamble$ -- 1
-purify$ -- 105
+purify$ -- 120
 quote$ -- 0
-skip$ -- 92
+skip$ -- 105
 stack$ -- 0
-substring$ -- 10625
-swap$ -- 42
-text.length$ -- 98
+substring$ -- 11208
+swap$ -- 48
+text.length$ -- 112
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 28
+type$ -- 32
 warning$ -- 0
-while$ -- 168
+while$ -- 192
 width$ -- 0
-write$ -- 38
+write$ -- 43
