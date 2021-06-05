@@ -5,15 +5,15 @@ The style file: aea.bst
 Database file #1: inequality-design.bib
 You've used 7 entries,
             2695 wiz_defined-function locations,
-            617 strings with 4927 characters,
-and the built_in function-call counts, 47947 in all, are:
-= -- 8068
-> -- 532
+            619 strings with 4871 characters,
+and the built_in function-call counts, 44236 in all, are:
+= -- 7409
+> -- 508
 < -- 0
-+ -- 3973
-- -- 168
-* -- 4304
-:= -- 9337
++ -- 3640
+- -- 160
+* -- 3961
+:= -- 8660
 add.period$ -- 49
 call.type$ -- 7
 change.case$ -- 91
@@ -21,8 +21,8 @@ chr.to.int$ -- 7
 cite$ -- 7
 duplicate$ -- 98
 empty$ -- 239
-format.name$ -- 171
-if$ -- 8604
+format.name$ -- 160
+if$ -- 7926
 int.to.chr$ -- 5
 int.to.str$ -- 0
 missing$ -- 0
@@ -34,13 +34,13 @@ purify$ -- 105
 quote$ -- 0
 skip$ -- 92
 stack$ -- 0
-substring$ -- 11606
+substring$ -- 10625
 swap$ -- 42
 text.length$ -- 98
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 28
 warning$ -- 0
-while$ -- 165
+while$ -- 168
 width$ -- 0
 write$ -- 38
